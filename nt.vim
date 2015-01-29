@@ -2,6 +2,7 @@ se dir=~/Temp
 se mp=mingw32-make
 so $VIMRUNTIME/delmenu.vim
 so $VIMRUNTIME/menu.vim
+se gfn=dejavu_sans_mono:h10
 
 com JSUglify exe "!py -m uglifyjs2 %" | exe "tabe ".expand("%:r").".min.js"
 com JSBeautify exe "!py -m uglifyjs2 -m b %" | exe "tabe ".expand("%:r").".beau.js"
