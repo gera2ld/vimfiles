@@ -1,7 +1,7 @@
 "Vundle
 filetype off
 se rtp+=$VIMFILES/bundle/Vundle.vim
-call vundle#begin(expand('$VIMFILES/bundle',1))
+call vundle#begin($VIMFILES.'/bundle')
 Plugin 'gmarik/Vundle.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'jQuery'

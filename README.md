@@ -6,7 +6,7 @@ Windows
 ```
 $ cd %userprofile%
 $ git clone git@git.oschina.net:gerald/vimfiles.git vimfiles
-$ mkdir vimfiles/bundle
+$ mkdir vimfiles\bundle
 $ git clone https://github.com/gmarik/Vundle.vim.git vimfiles/bundle/Vundle.vim
 ```
 
