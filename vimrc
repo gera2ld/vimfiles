@@ -79,7 +79,11 @@ map <silent> <down> gj
 map <silent> <up> gk
 se vb t_vb=    " remove visual bell, must be reset in _gvimrc
 
-au BufNewFile,BufRead *.php,*.htm,*.html,*.js exe 'se ts=2 sw=2 ai'
+au BufNewFile,BufRead *.php,*.htm,*.html,*.js se ts=2 sw=2 ai
+au BufEnter *.vim se sw=2 sts=2
+
+" Auto RTrim
+au BufWritePre,FileWritePre * ks|%s/\s\+$//e|%s/\r$//e|'s
 
 if has('win32')
   let $VIMFILES='$HOME/vimfiles'

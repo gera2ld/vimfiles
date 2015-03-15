@@ -7,9 +7,6 @@ fu ReadPython()
   en
   se sw=4 ts=4
   IndentGuidesEnable
-  "echo "BufEnter"
 endf
 au BufNewFile *.py exe "norm i#!python\n# coding=utf-8\n"
 au BufEnter *.py,*.pyx,*.app call ReadPython()
-
-" vim:sw=2 sts=2
