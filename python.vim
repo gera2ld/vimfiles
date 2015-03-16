@@ -5,7 +5,7 @@ fu ReadPython()
 	let e=substitute(m,'.*coding=\([0-9A-Za-z-]*\).*','\1','')
 	exe 'se fenc='.e
   en
-  se sw=4 ts=4
+  se sw=4 ts=4 noet
   IndentGuidesEnable
 endf
 au BufNewFile *.py exe "norm i#!python\n# coding=utf-8\n"
