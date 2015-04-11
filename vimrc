@@ -94,5 +94,6 @@ endif
 so $VIMFILES/vundle.vim
 so $VIMFILES/python.vim
 so $VIMFILES/golang.vim
+so $VIMFILES/rst.vim
 
 " vim:sw=2 sts=2
