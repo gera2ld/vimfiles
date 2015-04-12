@@ -82,8 +82,14 @@ se vb t_vb=    " remove visual bell, must be reset in _gvimrc
 au BufNewFile,BufRead *.php,*.htm,*.html,*.js se ts=2 sw=2 ai
 au BufEnter *.vim se sw=2 sts=2
 
-" Auto RTrim
-au BufWritePre,FileWritePre * ks|%s/\s\+$//e|%s/\r$//e|'s
+fu RTrim()
+  let o_pos = getpos('.')
+  " e flag for suppressing errors
+  exe '%s/\s\+$//e'
+  exe '%s/\r$//e'
+  call setpos('.', o_pos)
+endf
+au BufWritePre,FileWritePre * call RTrim()
 
 if has('win32')
   let $VIMFILES='$HOME/vimfiles'
