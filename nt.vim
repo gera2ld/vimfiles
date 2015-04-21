@@ -5,6 +5,12 @@ so $VIMRUNTIME/menu.vim
 "se gfn=dejavu_sans_mono:h10
 se gfn=Consolas:h12:cANSI
 
-com JSUglify exe "!py -m uglifyjs2 %" | exe "tabe ".expand("%:r").".min.js"
-com JSBeautify exe "!py -m uglifyjs2 -m b %" | exe "tabe ".expand("%:r").".beau.js"
+fu! JSBeautify()
+	let path = expand("%:r") . ".beau.js"
+	exe "!uglifyjs % -b > " . path
+	exe "tabe " . path
+endf
+
+com JSUglify exe "%!uglifyjs" | exe "tabe ".expand("%:r").".min.js"
+com JSBeautify call JSBeautify()
 com JSONBeautify %d|exe "r !py -c \"import json;s=json.load(open('%'));print(json.dumps(s,ensure_ascii=False,indent='\t'))\""|1d

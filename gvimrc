@@ -42,5 +42,4 @@ endif
 
 "se go=gmrLtTe
 se vb t_vb=    " remove visual bell, must be reset in _gvimrc
-"colo torte
-colo molokai
+colo torte

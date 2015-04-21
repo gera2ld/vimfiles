@@ -13,6 +13,6 @@ Plugin 'othree/html5.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jeroenbourgois/vim-actionscript'
-Plugin 'tomasr/molokai'
+Plugin 'leafgarland/typescript-vim'
 call vundle#end()
 filetype plugin indent on
