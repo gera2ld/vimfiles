@@ -84,7 +84,12 @@ au BufEnter *.php,*.htm,*.html,*.js,*.vim setl ts=2 sw=2 noet
 fu RTrim()
   let o_pos = getpos('.')
   " e flag for suppressing errors
-  exe '%s/\s\+$//e'
+  if b:current_syntax == 'markdown'
+    " only empty lines are trimmed
+    exe '%s/^\s\+$//e'
+  else
+    exe '%s/\s\+$//e'
+  en
   exe '%s/\r$//e'
   call setpos('.', o_pos)
 endf
