@@ -3,16 +3,32 @@ filetype off
 se rtp+=$VIMFILES/bundle/Vundle.vim
 call vundle#begin($VIMFILES.'/bundle')
 Plugin 'gmarik/Vundle.vim'
+
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'jQuery'
-Plugin 'The-NERD-tree'
 Plugin 'neocomplcache'
-Plugin 'taglist.vim'
 Plugin 'Markdown-syntax'
 Plugin 'othree/html5.vim'
 Plugin 'groenewege/vim-less'
-Plugin 'pangloss/vim-javascript'
 Plugin 'jeroenbourgois/vim-actionscript'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'scrooloose/nerdcommenter'
+
+" JavaScript
+Plugin 'pangloss/vim-javascript'
+Plugin 'jQuery'
+"Plugin 'marijnh/tern_for_vim'
+Plugin 'elzr/vim-json'
+
+" UI
+Plugin 'bling/vim-airline'
+"Plugin 'taglist.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'Valloric/ListToggle'
+
+" NERD tree
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
 call vundle#end()
 filetype plugin indent on
