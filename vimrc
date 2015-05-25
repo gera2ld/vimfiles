@@ -95,6 +95,9 @@ fu RTrim()
 endf
 au BufWritePre,FileWritePre * call RTrim()
 
+" JSON
+com JSONBeautify %!python -c "import sys,json;json.dump(json.load(sys.stdin),sys.stdout,ensure_ascii=False,indent='\t')"
+
 if has('win32')
   let $VIMFILES='$HOME/vimfiles'
   so $VIMFILES/nt.vim
