@@ -19,6 +19,6 @@ fu EnterPython()
   IndentGuidesEnable
 endf
 
-au BufNewFile *.py exe "norm i#!python\n# coding=utf-8\n"
+au BufNewFile *.py exe "norm i#!/usr/bin/env python\n# coding=utf-8\n"
 au BufRead *.py,*.pyx,*.app call ReadPython()
 au BufEnter *.py,*.pyx,*.app call EnterPython()
