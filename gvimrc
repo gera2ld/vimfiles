@@ -43,3 +43,10 @@ endif
 "se go=gmrLtTe
 se vb t_vb=    " remove visual bell, must be reset in _gvimrc
 colo torte
+
+if has("gui_gtk2")
+	se gfn=DejaVu\ Sans\ Mono\ 11
+else
+	"se gfn=Consolas:h12:cANSI
+	se gfn=dejavu_sans_mono:h11
+endif

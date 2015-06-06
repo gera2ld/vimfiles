@@ -2,8 +2,6 @@ se dir=~/Temp
 se mp=mingw32-make
 so $VIMRUNTIME/delmenu.vim
 so $VIMRUNTIME/menu.vim
-"se gfn=Consolas:h12:cANSI
-se gfn=dejavu_sans_mono:h11
 
 fu! JSBeautify()
 	let path = expand("%:r") . ".beau.js"
