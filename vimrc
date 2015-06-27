@@ -84,7 +84,7 @@ au BufEnter *.php,*.htm,*.html,*.js,*.vim setl ts=2 sw=2 noet
 fu RTrim()
   let o_pos = getpos('.')
   " e flag for suppressing errors
-  if has('b:current_syntax') && b:current_syntax == 'markdown'
+  if exists('b:current_syntax') && b:current_syntax == 'markdown'
     " only empty lines are trimmed
     exe '%s/^\s\+$//e'
   else
@@ -94,9 +94,6 @@ fu RTrim()
   call setpos('.', o_pos)
 endf
 au BufWritePre,FileWritePre * call RTrim()
-
-" JSON
-com JSONBeautify %!python -c "import sys,json;json.dump(json.load(sys.stdin),sys.stdout,ensure_ascii=False,indent='\t')"
 
 if has('win32')
   let $VIMFILES='$HOME/vimfiles'
@@ -108,5 +105,6 @@ so $VIMFILES/vundle.vim
 so $VIMFILES/python.vim
 so $VIMFILES/golang.vim
 so $VIMFILES/rst.vim
+so $VIMFILES/json.vim
 
 " vim:sw=2 sts=2
