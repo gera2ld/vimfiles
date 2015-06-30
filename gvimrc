@@ -42,6 +42,8 @@ endif
 
 "se go=gmrLtTe
 se vb t_vb=    " remove visual bell, must be reset in _gvimrc
+
+" The colors look weird in console
 colo torte
 
 if has("gui_gtk2")

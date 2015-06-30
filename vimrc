@@ -79,7 +79,7 @@ map <silent> <down> gj
 map <silent> <up> gk
 se vb t_vb=    " remove visual bell, must be reset in _gvimrc
 
-au BufEnter *.php,*.htm,*.html,*.js,*.vim setl ts=2 sw=2 noet
+au BufEnter *.php,*.htm,*.html,*.js,*.vim setl ts=2 sw=2 et
 
 fu RTrim()
   let o_pos = getpos('.')
