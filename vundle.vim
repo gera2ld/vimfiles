@@ -20,6 +20,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'jQuery'
 "Plugin 'marijnh/tern_for_vim'
 Plugin 'elzr/vim-json'
+Plugin 'kchmck/vim-coffee-script'
 
 " UI
 Plugin 'bling/vim-airline'
