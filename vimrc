@@ -79,7 +79,8 @@ map <silent> <down> gj
 map <silent> <up> gk
 se vb t_vb=    " remove visual bell, must be reset in _gvimrc
 
-au BufEnter *.php,*.htm,*.html,*.js,*.vim,*.coffee setl ts=2 sw=2 et
+au BufEnter *.php,*.htm,*.html,*.js,*.vim,*.coffee,*.less setl ts=2 sw=2 et
+let g:indent_guides_enable_on_vim_startup = 1
 
 fu RTrim()
   let o_pos = getpos('.')
@@ -101,6 +102,7 @@ if has('win32')
 else
   let $VIMFILES='~/.vim'
   se dir=/tmp
+  colo desert
 endif
 so $VIMFILES/vundle.vim
 so $VIMFILES/python.vim

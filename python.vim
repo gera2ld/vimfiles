@@ -15,8 +15,7 @@ fu ReadPython()
 endf
 
 fu EnterPython()
-  setl sw=4 ts=4 noet
-  IndentGuidesEnable
+  setl sw=4 ts=4 et
 endf
 
 au BufNewFile *.py exe "norm i#!/usr/bin/env python\n# coding=utf-8\n"
