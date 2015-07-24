@@ -36,7 +36,7 @@ fu s:randKey()
   return key
 endf
 
-fu AddUniqueIdForRST()
+fu RSTAddUniqueId()
   let lu = search(s:reguid)
   let ln = 3
   if lu == 0
@@ -52,4 +52,4 @@ fu AddUniqueIdForRST()
   endif
 endf
 
-au BufNewFile,BufRead *.rst call AddUniqueIdForRST()
+au BufNewFile,BufRead *.rst call RSTAddUniqueId()

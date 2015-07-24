@@ -48,7 +48,9 @@ colo torte
 
 if has("gui_gtk2")
 	se gfn=DejaVu\ Sans\ Mono\ 11
+elseif has("mac")
+	se gfn=Monaco:h14
 else
 	"se gfn=Consolas:h12:cANSI
-	se gfn=dejavu_sans_mono:h11
+	se gfn=dejavu_sans_mono:h12
 endif
