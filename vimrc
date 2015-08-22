@@ -109,5 +109,6 @@ so $VIMFILES/python.vim
 so $VIMFILES/golang.vim
 so $VIMFILES/rst.vim
 so $VIMFILES/json.vim
+so $VIMFILES/mappings.vim
 
 " vim:sw=2 sts=2

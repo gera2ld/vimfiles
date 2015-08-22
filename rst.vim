@@ -36,7 +36,7 @@ fu s:randKey()
   return key
 endf
 
-fu RSTAddUniqueId()
+fu <SID>RSTAddUniqueId()
   let lu = search(s:reguid)
   let ln = 3
   if lu == 0
@@ -52,4 +52,7 @@ fu RSTAddUniqueId()
   endif
 endf
 
-au BufNewFile,BufRead *.rst call RSTAddUniqueId()
+au BufEnter *.rst setl ts=4 sw=4 et
+
+" Set shortcut
+au BufEnter *.rst nmap <buffer> <LocalLeader>uid :call <SID>RSTAddUniqueId()<CR>
