@@ -106,7 +106,6 @@ else
 endif
 so $VIMFILES/vundle.vim
 so $VIMFILES/python.vim
-so $VIMFILES/golang.vim
 so $VIMFILES/rst.vim
 so $VIMFILES/json.vim
 so $VIMFILES/mappings.vim

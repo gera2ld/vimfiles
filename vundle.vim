@@ -23,6 +23,9 @@ Plugin 'elzr/vim-json'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
 
+" Go
+Plugin 'fatih/vim-go'
+
 " UI
 Plugin 'bling/vim-airline'
 "Plugin 'taglist.vim'
