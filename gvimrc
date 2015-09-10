@@ -41,6 +41,8 @@ if version >= 500
 endif
 
 "se go=gmrLtTe
+se go-=m
+se go-=T
 se vb t_vb=    " remove visual bell, must be reset in _gvimrc
 
 " The colors look weird in console
