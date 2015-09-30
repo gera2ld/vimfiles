@@ -13,6 +13,6 @@ fu <SID>json_uglify()
   exe '%!'. s:python . ' -c "import sys,json,collections;json.dump(json.load(sys.stdin,object_pairs_hook=collections.OrderedDict),sys.stdout,ensure_ascii=False,separators=('','','':''))"'
 endf
 
-au BufEnter *.rst setl ts=2 sw=2 et
+au BufEnter *.json setl ts=2 sw=2 et
 au BufEnter *.json nmap <buffer> <LocalLeader>jb :call <SID>json_beautify()<CR>
 au BufEnter *.json nmap <buffer> <LocalLeader>ju :call <SID>json_uglify()<CR>
