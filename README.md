@@ -32,6 +32,14 @@ Usage
 
   However, MacVim works with `~/.vim` but has some other problems, such as incomplete display.
 
+* **NeoVim**
+
+  ``` sh
+  ln -s ~/.vim ~/.nvim
+  cd ~/.vim
+  ln -s vimrc nvimrc
+  ```
+
 Features
 ---
 * Mappings (shortcuts)
@@ -44,3 +52,6 @@ Features
     * `<LocalLeader>ju` -> JSON uglify
   * ReStructuredText (`*.rst` only)
     * `<LocalLeader>uid` -> Add unique id as meta for `*.rst` file
+  * CtrlP
+    * `<Leader>p` -> `CtrlP`
+    * `<Leader>pm` -> `CtrlPMixed`
