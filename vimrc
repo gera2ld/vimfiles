@@ -110,4 +110,8 @@ so $VIMFILES/rst.vim
 so $VIMFILES/json.vim
 so $VIMFILES/mappings.vim
 
+let g:ctrlp_custom_ignore = {
+      \ 'dir': '\v(\/|^)(bower_components|node_modules)$',
+      \ }
+
 " vim:sw=2 sts=2

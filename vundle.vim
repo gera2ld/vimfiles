@@ -15,6 +15,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'gregsexton/MatchTag'
 "Plugin 'valloric/MatchTagAlways'
 Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
 
 " JavaScript
 Plugin 'pangloss/vim-javascript'
