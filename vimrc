@@ -114,4 +114,9 @@ let g:ctrlp_custom_ignore = {
       \ 'dir': '\v(\/|^)(bower_components|node_modules)$',
       \ }
 
+function! AirlineInit()
+  let g:airline_section_b = '%{strftime("%c")}'
+endf
+autocmd VimEnter * call AirlineInit()
+
 " vim:sw=2 sts=2
