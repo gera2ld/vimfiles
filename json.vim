@@ -14,5 +14,5 @@ fu <SID>json_uglify()
 endf
 
 au BufEnter *.json setl ts=2 sw=2 et
-au BufEnter *.json nmap <buffer> <LocalLeader>jb :call <SID>json_beautify()<CR>
-au BufEnter *.json nmap <buffer> <LocalLeader>ju :call <SID>json_uglify()<CR>
+au BufEnter * nmap <buffer> <LocalLeader>jb :call <SID>json_beautify()<CR>
+au BufEnter * nmap <buffer> <LocalLeader>ju :call <SID>json_uglify()<CR>

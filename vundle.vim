@@ -24,6 +24,7 @@ Plugin 'jQuery'
 Plugin 'elzr/vim-json'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'darthmall/vim-vue'
 
 " Go
 Plugin 'fatih/vim-go'
