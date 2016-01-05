@@ -23,8 +23,9 @@ Plugin 'jQuery'
 "Plugin 'marijnh/tern_for_vim'
 Plugin 'elzr/vim-json'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'digitaltoad/vim-jade'
+"Plugin 'digitaltoad/vim-jade'
 Plugin 'darthmall/vim-vue'
+Plugin 'mxw/vim-jsx'
 
 " Go
 Plugin 'fatih/vim-go'

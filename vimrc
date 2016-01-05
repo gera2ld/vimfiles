@@ -79,7 +79,7 @@ map <silent> <down> gj
 map <silent> <up> gk
 se vb t_vb=    " remove visual bell, must be reset in _gvimrc
 
-au BufEnter *.php,*.htm,*.html,*.js,*.vim,*.coffee,*.less,*.css setl ts=2 sw=2 et
+au BufEnter *.php,*.htm,*.html,*.js,*.vim,*.coffee,*.less,*.css,*.sh setl ts=2 sw=2 et
 let g:indent_guides_enable_on_vim_startup = 1
 
 fu RTrim()
@@ -110,6 +110,8 @@ so $VIMFILES/rst.vim
 so $VIMFILES/json.vim
 so $VIMFILES/mappings.vim
 
+let NERDTreeShowHidden = 1
+let g:jsx_ext_required = 0
 let g:ctrlp_custom_ignore = {
       \ 'dir': '\v(\/|^)(bower_components|node_modules)$',
       \ }
