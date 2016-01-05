@@ -97,18 +97,16 @@ endf
 au BufWritePre,FileWritePre * call RTrim()
 
 if has('win32')
-  let $VIMFILES='$HOME/vimfiles'
-  so $VIMFILES/nt.vim
+  ru nt.vim
 else
-  let $VIMFILES='~/.vim'
   se dir=/tmp
   colo desert
 endif
-so $VIMFILES/vundle.vim
-so $VIMFILES/python.vim
-so $VIMFILES/rst.vim
-so $VIMFILES/json.vim
-so $VIMFILES/mappings.vim
+ru vundle.vim
+ru python.vim
+ru rst.vim
+ru json.vim
+ru mappings.vim
 
 let NERDTreeShowHidden = 1
 let g:jsx_ext_required = 0

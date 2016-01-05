@@ -1,7 +1,8 @@
 "Vundle
 filetype off
-se rtp+=$VIMFILES/bundle/Vundle.vim
-call vundle#begin($VIMFILES.'/bundle')
+let s:bundle = expand('<sfile>:p:h') . '/bundle'
+exec 'se rtp+=' . s:bundle . '/Vundle.vim'
+call vundle#begin(s:bundle)
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'nathanaelkane/vim-indent-guides'

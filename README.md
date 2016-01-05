@@ -13,7 +13,7 @@ Usage
   $ git clone https://github.com/gmarik/Vundle.vim.git vimfiles/bundle/Vundle.vim
   ```
 
-* **Linux**
+* **Linux** and **Mac OS X**
 
   ``` bash
   $ cd ~
@@ -21,16 +21,6 @@ Usage
   $ mkdir .vim/bundle
   $ git clone https://github.com/gmarik/Vundle.vim.git .vim/bundle/Vundle.vim
   ```
-
-* **Mac OS X**
-
-  Only `~/.vimrc` is imported by Vim in Mac OS. So you need `so ~/.vim/vimrc` manually. First clone the repository as in Linux. Then add `~/.vimrc`:
-
-  ``` vimL
-  so ~/.vim/vimrc
-  ```
-
-  However, MacVim works with `~/.vim` but has some other problems, such as incomplete display.
 
 * **NeoVim**
 
