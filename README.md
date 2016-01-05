@@ -35,9 +35,8 @@ Usage
 * **NeoVim**
 
   ``` sh
-  ln -s ~/.vim ~/.nvim
-  cd ~/.vim
-  ln -s vimrc nvimrc
+  ln -s ~/.vim ~/.config/nvim
+  ln -s ~/.vim/vimrc ~/.vim/init.vim
   ```
 
 Features
