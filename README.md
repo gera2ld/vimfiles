@@ -22,6 +22,11 @@ Usage
   $ git clone https://github.com/gmarik/Vundle.vim.git .vim/bundle/Vundle.vim
   ```
 
+  For **Vim** (Not MacVim) on **Mac OS X**:
+  ``` bash
+  $ echo 'so ~/.vim/vimrc' >> ~/.vimrc
+  ```
+
 * **NeoVim**
 
   ``` sh
