@@ -79,9 +79,10 @@ map <silent> <down> gj
 map <silent> <up> gk
 se vb t_vb=    " remove visual bell, must be reset in _gvimrc
 
-au BufEnter *.php,*.htm,*.html,*.js,*.vim,*.coffee,*.less,*.css,*.sh setl ts=2 sw=2 et
-let g:indent_guides_enable_on_vim_startup = 1
+"au BufEnter *.php,*.htm,*.html,*.js,*.vim,*.coffee,*.less,*.css,*.scss,*.sh,*.yml setl ts=2 sw=2 et
+se ts=2 sw=2 et
 
+" Remove trailing spaces
 fu RTrim()
   let o_pos = getpos('.')
   " e flag for suppressing errors
@@ -97,26 +98,15 @@ endf
 au BufWritePre,FileWritePre * call RTrim()
 
 if has('win32')
-  ru nt.vim
+  se dir=~/Temp
+  se mp=mingw32-make
+  so $VIMRUNTIME/delmenu.vim
+  so $VIMRUNTIME/menu.vim
 else
   se dir=/tmp
   colo desert
 endif
 ru vundle.vim
-ru python.vim
-ru rst.vim
-ru json.vim
 ru mappings.vim
-
-let NERDTreeShowHidden = 1
-let g:jsx_ext_required = 0
-let g:ctrlp_custom_ignore = {
-      \ 'dir': '\v(\/|^)(bower_components|node_modules)$',
-      \ }
-
-function! AirlineInit()
-  let g:airline_section_b = '%{strftime("%c")}'
-endf
-autocmd VimEnter * call AirlineInit()
 
 " vim:sw=2 sts=2

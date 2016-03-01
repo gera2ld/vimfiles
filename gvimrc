@@ -49,10 +49,10 @@ se vb t_vb=    " remove visual bell, must be reset in _gvimrc
 colo torte
 
 if has("gui_gtk2")
-	se gfn=DejaVu\ Sans\ Mono\ 11
+  se gfn=DejaVu\ Sans\ Mono\ 11
 elseif has("mac")
-	se gfn=Monaco:h14
+  se gfn=Monaco:h14
 else
-	"se gfn=Consolas:h12:cANSI
-	se gfn=dejavu_sans_mono:h12
+  "se gfn=Consolas:h12:cANSI
+  se gfn=dejavu_sans_mono:h12
 endif

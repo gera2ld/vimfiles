@@ -44,3 +44,12 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()
 filetype plugin indent on
+
+let g:indent_guides_enable_on_vim_startup = 1
+let NERDTreeShowHidden = 1
+let g:jsx_ext_required = 0
+let g:ctrlp_custom_ignore = {
+      \ 'dir': '\v(\/|^)(bower_components|node_modules)$',
+      \ }
+
+autocmd VimEnter * let g:airline_section_b = '%{strftime("%c")}'
