@@ -52,4 +52,7 @@ let g:ctrlp_custom_ignore = {
       \ 'dir': '\v(\/|^)(bower_components|node_modules)$',
       \ }
 
+" for vim-javascript
+se cino=:0
+
 autocmd VimEnter * let g:airline_section_b = '%{strftime("%c")}'
