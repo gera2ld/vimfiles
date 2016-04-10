@@ -17,6 +17,7 @@ Plugin 'gregsexton/MatchTag'
 "Plugin 'valloric/MatchTagAlways'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'lepture/vim-jinja'
 
 " JavaScript
 Plugin 'pangloss/vim-javascript'
