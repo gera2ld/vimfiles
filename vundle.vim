@@ -11,23 +11,25 @@ Plugin 'Markdown-syntax'
 Plugin 'othree/html5.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'jeroenbourgois/vim-actionscript'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'gregsexton/MatchTag'
 "Plugin 'valloric/MatchTagAlways'
+"Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'lepture/vim-jinja'
 
 " JavaScript
 Plugin 'pangloss/vim-javascript'
-Plugin 'jQuery'
+Plugin 'mxw/vim-jsx'
 "Plugin 'marijnh/tern_for_vim'
 Plugin 'elzr/vim-json'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'darthmall/vim-vue'
-Plugin 'mxw/vim-jsx'
+Plugin 'kchmck/vim-coffee-script'
+"Plugin 'othree/yajs.vim'
+"Plugin 'othree/es.next.syntax.vim'
+"Plugin 'othree/javascript-libraries-syntax.vim'
 
 " Go
 Plugin 'fatih/vim-go'
@@ -52,6 +54,7 @@ let g:jsx_ext_required = 0
 let g:ctrlp_custom_ignore = {
       \ 'dir': '\v(\/|^)(bower_components|node_modules)$',
       \ }
+"let g:ackprg = 'ag --vimgrep -s'
 
 " for vim-javascript
 se cino=:0
