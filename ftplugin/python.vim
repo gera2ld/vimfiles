@@ -16,6 +16,6 @@ if coding != ''
 en
 
 " If this is a new file
-if !filereadable(expand('%'))
+if line('$') == 1 && getline('$') == ''
   exec "norm i#!/usr/bin/env python\n# coding=utf-8\n"
 en
