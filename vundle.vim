@@ -58,5 +58,8 @@ let g:ctrlp_custom_ignore = {
 
 " for vim-javascript
 se cino=:0
+" Remove dots to avoid indentation for chained function calls
+let g:javascript_opfirst = '\%([<>,?^%|*&]\|\/[^/*]\|\([-:+]\)\1\@!\|=>\@!\|in\%(stanceof\)\=\>\)'
+let g:javascript_continuation = '\%([<=,?/*^%|&:]\|+\@<!+\|-\@<!-\|=\@<!>\|\<in\%(stanceof\)\=\)'
 
 autocmd VimEnter * let g:airline_section_b = '%{strftime("%c")}'
