@@ -25,11 +25,12 @@ Plugin 'mxw/vim-jsx'
 "Plugin 'marijnh/tern_for_vim'
 Plugin 'elzr/vim-json'
 Plugin 'digitaltoad/vim-pug'
-Plugin 'darthmall/vim-vue'
+Plugin 'posva/vim-vue'
 Plugin 'kchmck/vim-coffee-script'
 "Plugin 'othree/yajs.vim'
 "Plugin 'othree/es.next.syntax.vim'
 "Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'leafgarland/typescript-vim'
 
 " Go
 Plugin 'fatih/vim-go'
