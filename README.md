@@ -9,25 +9,30 @@ Usage
   ``` bash
   $ cd %userprofile%
   $ git clone git@github.com:gera2ld/vimfiles.git vimfiles
-  $ mkdir vimfiles\bundle
-  $ git clone https://github.com/gmarik/Vundle.vim.git vimfiles/bundle/Vundle.vim
+  $ curl -fLo ~/vimfiles/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   ```
 
 * **Linux** and **Mac OS X**
 
+  Also install [vim-plug](https://github.com/junegunn/vim-plug).
+
   ``` bash
   $ cd ~
   $ git clone git@github.com:gera2ld/vimfiles.git .vim
-  $ mkdir .vim/bundle
-  $ git clone https://github.com/gmarik/Vundle.vim.git .vim/bundle/Vundle.vim
+
+  # Install vim-plug
+  $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  # Then exec `:PlugInstall` in Vim or NeoVim
   ```
 
-  For **Vim** (Not MacVim) on **Mac OS X**:
+  For **Vim** (not MacVim) on **Mac OS X**:
   ``` bash
   $ echo 'so ~/.vim/vimrc' >> ~/.vimrc
   ```
 
 * **NeoVim**
+
+  For NeoVim some extra work is needed.
 
   ``` sh
   ln -s ~/.vim ~/.config/nvim
@@ -46,6 +51,5 @@ Features
     * `<LocalLeader>ju` -> JSON uglify
   * ReStructuredText (`*.rst` only)
     * `<LocalLeader>uid` -> Add unique id as meta for `*.rst` file
-  * CtrlP
-    * `<Leader>p` -> `CtrlP`
-    * `<Leader>pm` -> `CtrlPMixed`
+  * FZF
+    * `<Leader>f` -> `FZF`

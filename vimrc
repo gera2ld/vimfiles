@@ -106,7 +106,7 @@ else
   se dir=/tmp
   colo desert
 endif
-ru vundle.vim
+ru plug.vim
 ru mappings.vim
 
 " vim:sw=2 sts=2
