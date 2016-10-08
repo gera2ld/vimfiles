@@ -47,11 +47,11 @@ if !exists('s:keys')
       exe ln
       if line('.') < ln
         let ln = line('$')
-      endif
+      en
       call append(ln, ':uniqueid: ' . key)
       se mod
       call setpos('.', o_pos)
-    endif
+    en
   endf
 en
 

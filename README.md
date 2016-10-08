@@ -53,3 +53,5 @@ Features
     * `<LocalLeader>uid` -> Add unique id as meta for `*.rst` file
   * FZF
     * `<Leader>f` -> `FZF`
+  * Python
+    * `<LocalLeader>dec` -> Add coding declarations
