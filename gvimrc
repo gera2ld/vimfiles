@@ -2,10 +2,6 @@ set ch=2		" Make command line two lines high
 
 set mousehide		" Hide the mouse when typing text
 
-" Make shift-insert work like in Xterm
-map <S-Insert> <MiddleMouse>
-map! <S-Insert> <MiddleMouse>
-
 " Only do this for Vim version 5.0 and later.
 if version >= 500
 
@@ -43,7 +39,7 @@ endif
 "se go=gmrLtTe
 se go-=m
 se go-=T
-se vb t_vb=    " remove visual bell, must be reset in _gvimrc
+se novb t_vb=    " remove visual bell, must be reset in _gvimrc
 
 " The colors look weird in console
 colo torte
