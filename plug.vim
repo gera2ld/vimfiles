@@ -15,6 +15,7 @@ Plug 'rking/ag.vim'
 "Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'lepture/vim-jinja'
+Plug 'editorconfig/editorconfig-vim'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
