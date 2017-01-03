@@ -5,11 +5,11 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set nobackup		" do not keep a backup file, use versions instead
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+set nobackup    " do not keep a backup file, use versions instead
+set history=50    " keep 50 lines of command line history
+set ruler   " show the cursor position all the time
+set showcmd   " display incomplete commands
+set incsearch   " do incremental searching
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -60,7 +60,7 @@ if has("autocmd")
 
 else
 
-  set autoindent		" always set autoindenting on
+  set autoindent    " always set autoindenting on
 
 endif " has("autocmd")
 
@@ -69,7 +69,7 @@ endif " has("autocmd")
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+      \ | wincmd p | diffthis
 endif
 
 se enc=utf-8 fencs=ucs-bom,utf-8,cp936 ff=unix
@@ -79,8 +79,8 @@ map <silent> <down> gj
 map <silent> <up> gk
 se vb t_vb=    " remove visual bell, must be reset in _gvimrc
 
-"au BufEnter *.php,*.htm,*.html,*.js,*.vim,*.coffee,*.less,*.css,*.scss,*.sh,*.yml setl ts=2 sw=2 et
 se ts=2 sw=2 et
+au FileType make setl noet
 
 " Remove trailing spaces
 fu RTrim()
