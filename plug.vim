@@ -16,6 +16,7 @@ Plug 'rking/ag.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'lepture/vim-jinja'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'mattn/emmet-vim'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
