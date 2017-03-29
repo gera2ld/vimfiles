@@ -35,13 +35,22 @@ Usage
   For NeoVim some extra work is needed.
 
   ``` sh
-  ln -s ~/.vim ~/.config/nvim
-  ln -s ~/.vim/vimrc ~/.vim/init.vim
+  $ ln -s ~/.vim ~/.config/nvim
+  $ ln -s ~/.vim/vimrc ~/.vim/init.vim
   ```
 
 Features
 ---
-* Mappings (shortcuts)
+
+* **JavaScript**
+
+  Use [eslint_d](https://github.com/mantoni/eslint_d.js#editor-integration) with [syntastic](https://github.com/vim-syntastic/syntastic).
+
+  ``` sh
+  $ npm i eslint_d -g
+  ```
+
+* **Mappings** (shortcuts)
   * NERDTree
     * `<Leader>nt` -> `NERDTreeToggle`
     * `<Leader>nc` -> `NERDTreeCWD`
