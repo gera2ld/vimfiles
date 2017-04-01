@@ -18,7 +18,10 @@ Plug 'lepture/vim-jinja'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'milkypostman/vim-togglelist'
 Plug 'vim-syntastic/syntastic'
+" Plug 'neomake/neomake'
+" Plug 'dojoteef/neomake-autolint'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
@@ -65,13 +68,20 @@ let g:javascript_continuation = '\%([<=,?/*^%|&:]\|+\@<!+\|-\@<!-\|=\@<!>\|\<in\
 
 autocmd VimEnter * let g:airline_section_b = '%{strftime("%c")}'
 
+let g:toggle_list_no_mappings = 1
+
+" Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
+
+" let g:neomake_verbose = 3
+" let g:neomake_logfile = '/Users/gerald/Source/1.log'
+" let g:neomake_javascript_enabled_makers = ['eslint']
+" let g:neomake_javascript_eslint_exe = $PWD . '/node_modules/.bin/eslint'
