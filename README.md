@@ -64,3 +64,5 @@ Features
     * `<Leader>f` -> `FZF`
   * Python
     * `<LocalLeader>dec` -> Add coding declarations
+  * Other
+    * `<LocalLeader>ss` -> Sync syntax from start

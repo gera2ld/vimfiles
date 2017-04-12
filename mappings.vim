@@ -8,3 +8,5 @@ nmap <Leader>f :FZF<CR>
 nmap <Leader>lt :call ToggleLocationList()<CR>
 
 nmap <Leader>lm :Neomake<CR>
+
+nmap <Leader>ss :syntax sync fromstart<CR>
