@@ -10,9 +10,7 @@ Plug 'jeroenbourgois/vim-actionscript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'gregsexton/MatchTag'
 "Plug 'valloric/MatchTagAlways'
-"Plug 'mileszs/ack.vim'
 Plug 'rking/ag.vim'
-"Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'lepture/vim-jinja'
 Plug 'editorconfig/editorconfig-vim'
@@ -56,10 +54,6 @@ call plug#end()
 let g:indent_guides_enable_on_vim_startup = 1
 let NERDTreeShowHidden = 1
 let g:jsx_ext_required = 0
-let g:ctrlp_custom_ignore = {
-      \ 'dir': '\v(\/|^)(bower_components|node_modules)$',
-      \ }
-"let g:ackprg = 'ag --vimgrep -s'
 
 " for vim-javascript
 se cino=:0
