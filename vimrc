@@ -109,4 +109,6 @@ endif
 ru plug.vim
 ru mappings.vim
 
+au BufNewFile,BufRead *.ejs set ft=html
+
 " vim:sw=2 sts=2
