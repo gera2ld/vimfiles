@@ -18,7 +18,7 @@ Plug 'mattn/emmet-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'milkypostman/vim-togglelist'
 Plug 'w0rp/ale'
-" Plug 'vim-syntastic/syntastic'
+Plug 'Galooshi/vim-import-js', { 'do': 'npm i -g import-js' }
 " Plug 'neomake/neomake'
 " Plug 'dojoteef/neomake-autolint'
 
