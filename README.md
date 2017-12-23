@@ -52,7 +52,8 @@ Features
 
 * **Mappings** (shortcuts)
   * NERDTree
-    * `<Leader>nt` -> `NERDTreeToggle`
+    * `<Leader>nt` -> `NERDTree`
+    * `<Leader>nT` -> `NERDTreeToggle`
     * `<Leader>nc` -> `NERDTreeCWD`
     * `<Leader>nf` -> `NERDTreeFind`
   * JSON (`*.json` only)

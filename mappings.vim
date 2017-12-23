@@ -1,5 +1,6 @@
 " NERDTree
-nmap <Leader>nt :NERDTreeToggle<CR>
+nmap <Leader>nt :NERDTree<CR>
+nmap <Leader>nT :NERDTreeToggle<CR>
 nmap <Leader>nc :NERDTreeCWD<CR>
 nmap <Leader>nf :NERDTreeFind<CR>
 
