@@ -13,7 +13,7 @@ Plug 'gregsexton/MatchTag'
 Plug 'rking/ag.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'lepture/vim-jinja'
-Plug 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim', { 'do': 'pip3 install editorconfig' }
 Plug 'mattn/emmet-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'milkypostman/vim-togglelist'
