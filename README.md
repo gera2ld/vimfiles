@@ -65,5 +65,8 @@ Features
     * `<Leader>f` -> `FZF`
   * Python
     * `<LocalLeader>dec` -> Add coding declarations
+  * Shell
+    * `<LocalLeader>sh` -> Open shell in current window
+    * `<LocalLeader>vsh` -> Open shell in a vertically splitted window
   * Other
     * `<LocalLeader>ss` -> Sync syntax from start

@@ -11,3 +11,6 @@ nmap <Leader>lt :call ToggleLocationList()<CR>
 nmap <Leader>lm :Neomake<CR>
 
 nmap <Leader>ss :syntax sync fromstart<CR>
+
+nmap <Leader>sh :te<CR>
+nmap <Leader>vsh :vs term://$SHELL<CR>
