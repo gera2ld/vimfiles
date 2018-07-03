@@ -34,6 +34,7 @@ Plug 'kchmck/vim-coffee-script'
 "Plug 'othree/es.next.syntax.vim'
 "Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'tikhomirov/vim-glsl'
 
 " Go
 Plug 'fatih/vim-go'
