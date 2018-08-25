@@ -98,7 +98,7 @@ endf
 au BufWritePre,FileWritePre * call RTrim()
 
 if has('win32')
-  se dir=~/Temp
+  se dir=$TEMP
   se mp=mingw32-make
   so $VIMRUNTIME/delmenu.vim
   so $VIMRUNTIME/menu.vim
