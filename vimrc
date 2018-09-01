@@ -73,6 +73,7 @@ if !exists(":DiffOrig")
 endif
 
 se enc=utf-8 fencs=ucs-bom,utf-8,cp936 ff=unix
+lang zh_CN.utf-8
 lang mes zh_CN.utf-8
 se nowb nu
 map <silent> <down> gj
