@@ -73,8 +73,6 @@ if !exists(":DiffOrig")
 endif
 
 se enc=utf-8 fencs=ucs-bom,utf-8,cp936 ff=unix
-lang zh_CN.utf-8
-lang mes zh_CN.utf-8
 se nowb nu
 map <silent> <down> gj
 map <silent> <up> gk
@@ -106,6 +104,9 @@ if has('win32')
 else
   se dir=/tmp
   colo desert
+  " Windows has problem setting lang
+  lang zh_CN.utf-8
+  lang mes zh_CN.utf-8
 endif
 ru plug.vim
 ru mappings.vim
