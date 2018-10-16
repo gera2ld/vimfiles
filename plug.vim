@@ -50,6 +50,8 @@ Plug 'Valloric/ListToggle'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+Plug 'jceb/vim-orgmode'
+
 call plug#end()
 
 let g:indent_guides_enable_on_vim_startup = 1
