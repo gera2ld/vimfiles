@@ -48,6 +48,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
