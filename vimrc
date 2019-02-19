@@ -111,6 +111,10 @@ endif
 ru plug.vim
 ru mappings.vim
 
+if filereadable(glob("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
+
 au BufNewFile,BufRead *.ejs set ft=html
 
 " vim:sw=2 sts=2
