@@ -1,6 +1,8 @@
 let s:plugged = expand('<sfile>:p:h') . '/plugged'
 call plug#begin(s:plugged)
 
+Plug 'gera2ld/go-to-js'
+
 Plug 'nathanaelkane/vim-indent-guides'
 "Plug 'neocomplcache'        "obsolete
 "Plug 'Markdown-syntax'      "obsolete
