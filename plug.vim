@@ -49,8 +49,10 @@ Plug 'Valloric/ListToggle'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-Plug 'jceb/vim-orgmode'
+" Git
 Plug 'tpope/vim-fugitive'
+
+Plug 'elentok/plaintasks.vim'
 
 call plug#end()
 
