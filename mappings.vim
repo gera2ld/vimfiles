@@ -14,3 +14,6 @@ nmap <Leader>ss :syntax sync fromstart<CR>
 
 nmap <Leader>sh :te<CR>
 nmap <Leader>vsh :vs term://$SHELL<CR>
+
+nmap <Leader>dt a<c-r>=strftime("%Y-%m-%d")<CR><ESC>
+nmap <Leader>dT a<c-r>=strftime("%Y-%m-%d %H:%M:%S")<CR><ESC>
