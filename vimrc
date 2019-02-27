@@ -96,13 +96,16 @@ fu RTrim()
 endf
 au BufWritePre,FileWritePre * call RTrim()
 
+se undofile
 if has('win32')
-  se dir=$TEMP
+  se dir=$TEMP//
+  se undodir=$TEMP//
   se mp=mingw32-make
   so $VIMRUNTIME/delmenu.vim
   so $VIMRUNTIME/menu.vim
 else
-  se dir=/tmp
+  se dir=/tmp//
+  se undodir=/tmp//
   colo desert
   " Windows has problem setting lang
   lang zh_CN.utf-8
