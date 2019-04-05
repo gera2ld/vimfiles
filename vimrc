@@ -107,9 +107,6 @@ else
   se dir=/tmp//
   se undodir=/tmp//
   colo desert
-  " Windows has problem setting lang
-  lang zh_CN.utf-8
-  lang mes zh_CN.utf-8
 endif
 ru plug.vim
 ru mappings.vim
