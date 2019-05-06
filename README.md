@@ -61,8 +61,10 @@ Features
     * `<LocalLeader>ju` -> JSON uglify
   * ReStructuredText (`*.rst` only)
     * `<LocalLeader>uid` -> Add unique id as meta for `*.rst` file
-  * FZF
+  * Searching
     * `<Leader>f` -> `FZF`
+    * `gf` -> Try to find a JavaScript file and fallback to FZF if not found by default rule
+    * `g*` -> `Ag <cword>`
   * Python
     * `<LocalLeader>dec` -> Add coding declarations
   * Shell

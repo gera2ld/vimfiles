@@ -12,8 +12,9 @@ Plug 'jeroenbourgois/vim-actionscript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'gregsexton/MatchTag'
 "Plug 'valloric/MatchTagAlways'
-Plug 'rking/ag.vim'
+"Plug 'rking/ag.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'lepture/vim-jinja'
 Plug 'editorconfig/editorconfig-vim', { 'do': 'pip3 install editorconfig' }
 Plug 'mattn/emmet-vim'

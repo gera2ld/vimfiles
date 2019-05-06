@@ -5,6 +5,7 @@ nmap <Leader>nc :NERDTreeCWD<CR>
 nmap <Leader>nf :NERDTreeFind<CR>
 
 nmap <Leader>f :FZF<CR>
+nmap g* :exe 'Ag \b' . expand('<cword>') . '\b'<CR>
 
 nmap <Leader>lt :call ToggleLocationList()<CR>
 
