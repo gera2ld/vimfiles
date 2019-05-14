@@ -58,7 +58,7 @@ Features
     * `<Leader>nf` -> `NERDTreeFind`
   * JSON (`*.json` only)
     * `<LocalLeader>jb` -> JSON beautify
-    * `<LocalLeader>ju` -> JSON uglify
+    * `<LocalLeader>jc` -> JSON compact
   * ReStructuredText (`*.rst` only)
     * `<LocalLeader>uid` -> Add unique id as meta for `*.rst` file
   * Searching

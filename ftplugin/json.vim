@@ -1,22 +1,27 @@
 " JSON beautify and uglify via Python
 " Author: Gerald <i@gerald.top>
 
-if !exists('s:python')
-  if has('win32')
-    " Use python launcher
-    let s:python = 'py'
-  else
-    let s:python = 'python'
-  en
+if has('python3')
+  py3 << END
+import sys
+import json
+from collections import OrderedDict
+import vim
 
-  fu <SID>json_beautify()
-    exe '%!'. s:python . ' -c "import sys,json,collections;json.dump(json.load(sys.stdin,object_pairs_hook=collections.OrderedDict),sys.stdout,ensure_ascii=False,indent=2)"'
-  endf
+def parse_json():
+    buffer = vim.current.buffer
+    content = '\n'.join(buffer)
+    return json.loads(content, object_pairs_hook=OrderedDict)
 
-  fu <SID>json_uglify()
-    exe '%!'. s:python . ' -c "import sys,json,collections;json.dump(json.load(sys.stdin,object_pairs_hook=collections.OrderedDict),sys.stdout,ensure_ascii=False,separators=('','','':''))"'
-  endf
+def json_beautify():
+    data = parse_json()
+    vim.current.buffer[:] = json.dumps(data, ensure_ascii=False, indent=2).split('\n')
+
+def json_compact():
+    data = parse_json()
+    vim.current.buffer[:] = json.dumps(data, ensure_ascii=False, separators=(',',':')).split('\n')
+END
+
+  nmap <buffer> <LocalLeader>jb :py3 json_beautify()<CR>
+  nmap <buffer> <LocalLeader>jc :py3 json_compact()<CR>
 en
-
-nmap <buffer> <LocalLeader>jb :call <SID>json_beautify()<CR>
-nmap <buffer> <LocalLeader>ju :call <SID>json_uglify()<CR>
