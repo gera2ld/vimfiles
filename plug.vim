@@ -12,9 +12,9 @@ Plug 'jeroenbourgois/vim-actionscript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'gregsexton/MatchTag'
 "Plug 'valloric/MatchTagAlways'
-"Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf.vim'
 Plug 'lepture/vim-jinja'
 Plug 'editorconfig/editorconfig-vim', { 'do': 'pip3 install editorconfig' }
 Plug 'mattn/emmet-vim'
@@ -89,3 +89,8 @@ let g:toggle_list_no_mappings = 1
 " let g:neomake_logfile = '/Users/gerald/Source/1.log'
 " let g:neomake_javascript_enabled_makers = ['eslint']
 " let g:neomake_javascript_eslint_exe = $PWD . '/node_modules/.bin/eslint'
+
+" Ack / Ag
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
