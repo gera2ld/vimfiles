@@ -22,6 +22,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'milkypostman/vim-togglelist'
 Plug 'w0rp/ale'
 Plug 'Galooshi/vim-import-js', { 'do': 'npm i -g import-js' }
+Plug 'cespare/vim-toml'
 " Plug 'neomake/neomake'
 " Plug 'dojoteef/neomake-autolint'
 
