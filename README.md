@@ -1,74 +1,78 @@
-Gerald's vimfiles
-===
+# Gerald's vimfiles
 
-Usage
----
+## Usage
 
-* **Windows**
+### Config Preparation
 
-  ``` bash
-  $ cd %userprofile%
-  $ git clone git@github.com:gera2ld/vimfiles.git vimfiles
-  $ curl -fLo ~/vimfiles/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  ```
+#### Windows
 
-* **Linux** and **Mac OS X**
+```sh
+$ cd /d %userprofile%
+$ git clone git@github.com:gera2ld/vimfiles.git vimfiles
+```
 
-  Also install [vim-plug](https://github.com/junegunn/vim-plug).
+For **NeoVim**:
 
-  ``` bash
-  $ cd ~
-  $ git clone git@github.com:gera2ld/vimfiles.git .vim
+```sh
+$ mklink /j %localappdata%/nvim %userprofile%/vimfiles
 
-  # Install vim-plug
+# require administrator permission
+$ cd /d %userprofile%/vimfiles
+$ mklink init.vim vimrc
+```
+
+#### Unix
+
+```sh
+$ cd ~
+$ git clone git@github.com:gera2ld/vimfiles.git .vim
+```
+
+For **Vim** (not MacVim) on **Mac OS X**:
+
+```sh
+$ echo 'so ~/.vim/vimrc' >> ~/.vimrc
+```
+
+For **NeoVim**:
+
+```sh
+$ ln -s ~/.vim ~/.config/nvim
+$ ln -s ~/.vim/vimrc ~/.vim/init.vim
+```
+
+### Plugin Installation
+
+- Install [vim-plug](https://github.com/junegunn/vim-plug)
+
+  ```sh
   $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  # Then exec `:PlugInstall` in Vim or NeoVim
   ```
 
-  For **Vim** (not MacVim) on **Mac OS X**:
-  ``` bash
-  $ echo 'so ~/.vim/vimrc' >> ~/.vimrc
-  ```
+  Then install plugins by executing `:PlugInstall` in Vim or NeoVim.
 
-* **NeoVim**
+## Features
 
-  For NeoVim some extra work is needed.
+### Mappings
 
-  ``` sh
-  $ ln -s ~/.vim ~/.config/nvim
-  $ ln -s ~/.vim/vimrc ~/.vim/init.vim
-  ```
-
-Features
----
-
-* **JavaScript**
-
-  Use [eslint_d](https://github.com/mantoni/eslint_d.js#editor-integration) with [syntastic](https://github.com/vim-syntastic/syntastic).
-
-  ``` sh
-  $ npm i eslint_d -g
-  ```
-
-* **Mappings** (shortcuts)
-  * NERDTree
-    * `<Leader>nt` -> `NERDTree`
-    * `<Leader>nT` -> `NERDTreeToggle`
-    * `<Leader>nc` -> `NERDTreeCWD`
-    * `<Leader>nf` -> `NERDTreeFind`
-  * JSON (`*.json` only)
-    * `<LocalLeader>jb` -> JSON beautify
-    * `<LocalLeader>jc` -> JSON compact
-  * ReStructuredText (`*.rst` only)
-    * `<LocalLeader>uid` -> Add unique id as meta for `*.rst` file
-  * Searching
-    * `<Leader>f` -> `FZF`
-    * `gf` -> Try to find a JavaScript file and fallback to FZF if not found by default rule
-    * `g*` -> `Ag <cword>`
-  * Python
-    * `<LocalLeader>dec` -> Add coding declarations
-  * Shell
-    * `<LocalLeader>sh` -> Open shell in current window
-    * `<LocalLeader>vsh` -> Open shell in a vertically splitted window
-  * Other
-    * `<LocalLeader>ss` -> Sync syntax from start
+* NERDTree
+  * `<Leader>nt` -> `NERDTree`
+  * `<Leader>nT` -> `NERDTreeToggle`
+  * `<Leader>nc` -> `NERDTreeCWD`
+  * `<Leader>nf` -> `NERDTreeFind`
+* JSON (`*.json` only)
+  * `<LocalLeader>jb` -> JSON beautify
+  * `<LocalLeader>jc` -> JSON compact
+* ReStructuredText (`*.rst` only)
+  * `<LocalLeader>uid` -> Add unique id as meta for `*.rst` file
+* Searching
+  * `<Leader>f` -> `FZF`
+  * `gf` -> Try to find a JavaScript file and fallback to FZF if not found by default rule
+  * `g*` -> `Ag <cword>`
+* Python
+  * `<LocalLeader>dec` -> Add coding declarations
+* Shell
+  * `<LocalLeader>sh` -> Open shell in current window
+  * `<LocalLeader>vsh` -> Open shell in a vertically splitted window
+* Other
+  * `<LocalLeader>ss` -> Sync syntax from start
