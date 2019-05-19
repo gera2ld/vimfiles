@@ -33,7 +33,7 @@ Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
 Plug 'digitaltoad/vim-pug'
 Plug 'posva/vim-vue'
-Plug 'kchmck/vim-coffee-script'
+"Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'tikhomirov/vim-glsl'
 
