@@ -106,8 +106,8 @@ if has('win32')
 else
   se dir=/tmp//
   se undodir=/tmp//
-  colo desert
 endif
+colo desert
 ru plug.vim
 ru mappings.vim
 
