@@ -25,6 +25,7 @@ Plug 'Galooshi/vim-import-js', { 'do': 'npm i -g import-js' }
 Plug 'cespare/vim-toml'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'neomake/neomake'
 " Plug 'dojoteef/neomake-autolint'
 
@@ -107,3 +108,6 @@ let g:ultisnips_javascript = {
      \ 'semi': 'always',
      \ 'space-before-function-paren': 'always',
      \ }
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
