@@ -23,6 +23,8 @@ Plug 'milkypostman/vim-togglelist'
 Plug 'w0rp/ale'
 Plug 'Galooshi/vim-import-js', { 'do': 'npm i -g import-js' }
 Plug 'cespare/vim-toml'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 " Plug 'neomake/neomake'
 " Plug 'dojoteef/neomake-autolint'
 
@@ -95,3 +97,13 @@ let g:toggle_list_no_mappings = 1
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+" ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-y>l"
+let g:UltiSnipsJumpBackwardTrigger="<c-y>h"
+let g:ultisnips_javascript = {
+     \ 'keyword-spacing': 'always',
+     \ 'semi': 'always',
+     \ 'space-before-function-paren': 'always',
+     \ }
