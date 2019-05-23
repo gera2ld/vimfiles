@@ -26,17 +26,15 @@ Plug 'cespare/vim-toml'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'neomake/neomake'
-" Plug 'dojoteef/neomake-autolint'
+" Plug 'neomake/neomake'            " obsolete
+" Plug 'dojoteef/neomake-autolint'  " obsolete
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-"Plug 'marijnh/tern_for_vim'
 Plug 'elzr/vim-json'
 Plug 'digitaltoad/vim-pug'
 Plug 'posva/vim-vue'
-"Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'tikhomirov/vim-glsl'
 
@@ -48,7 +46,7 @@ Plug 'bling/vim-airline'
 "Plug 'taglist.vim'
 Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'Valloric/ListToggle'
+"Plug 'Valloric/ListToggle'
 
 " NERD tree
 Plug 'scrooloose/nerdtree'
@@ -73,26 +71,8 @@ let g:javascript_continuation = '\%([<=,?/*^%|&:]\|+\@<!+\|-\@<!-\|=\@<!>\|\<in\
 
 autocmd VimEnter * let g:airline_section_b = '%{strftime("%c")}'
 
+" vim-togglelist
 let g:toggle_list_no_mappings = 1
-
-" ALE
-
-" Syntastic
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-" let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_eslint_exec = 'eslint_d'
-
-" Neomake
-" let g:neomake_verbose = 3
-" let g:neomake_logfile = '/Users/gerald/Source/1.log'
-" let g:neomake_javascript_enabled_makers = ['eslint']
-" let g:neomake_javascript_eslint_exe = $PWD . '/node_modules/.bin/eslint'
 
 " Ack / Ag
 if executable('ag')

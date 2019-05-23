@@ -15,13 +15,4 @@ if !exists('s:regexp')
       exe 'se fenc=' . m[1]
     en
   en
-
-  fu <SID>Declare()
-    let coding = matchstr(getbufline('%', 1, 2), s:regexp)
-    if coding == ''
-      exe "norm ggO#!/usr/bin/env python\n# coding=utf-8\n\<Esc>j"
-    en
-  endf
 en
-
-map <buffer> <LocalLeader>dec :call <SID>Declare()<CR>

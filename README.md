@@ -55,24 +55,29 @@ $ ln -s ~/.vim/vimrc ~/.vim/init.vim
 
 ### Mappings
 
-* NERDTree
-  * `<Leader>nt` -> `NERDTree`
-  * `<Leader>nT` -> `NERDTreeToggle`
-  * `<Leader>nc` -> `NERDTreeCWD`
-  * `<Leader>nf` -> `NERDTreeFind`
-* JSON (`*.json` only)
-  * `<LocalLeader>jb` -> JSON beautify
-  * `<LocalLeader>jc` -> JSON compact
-* ReStructuredText (`*.rst` only)
-  * `<LocalLeader>uid` -> Add unique id as meta for `*.rst` file
-* Searching
-  * `<Leader>f` -> `FZF`
-  * `gf` -> Try to find a JavaScript file and fallback to FZF if not found by default rule
-  * `g*` -> `Ag <cword>`
-* Python
-  * `<LocalLeader>dec` -> Add coding declarations
-* Shell
-  * `<LocalLeader>sh` -> Open shell in current window
-  * `<LocalLeader>vsh` -> Open shell in a vertically splitted window
-* Other
-  * `<LocalLeader>ss` -> Sync syntax from start
+- NERDTree
+  - `<Leader>nt` -> `NERDTree`
+  - `<Leader>nT` -> `NERDTreeToggle`
+  - `<Leader>nc` -> `NERDTreeCWD`
+  - `<Leader>nf` -> `NERDTreeFind`
+- JSON (`*.json` only)
+  - `<LocalLeader>jb` -> JSON beautify
+  - `<LocalLeader>jc` -> JSON compact
+- Searching
+  - `<Leader>f` -> `FZF`
+  - `gf` -> Try to find a JavaScript file and fallback to FZF if not found by default rule
+  - `g*` -> `Ag <cword>`
+- Shell
+  - `<LocalLeader>sh` -> Open shell in current window
+  - `<LocalLeader>vsh` -> Open shell in a vertically splitted window
+- Other
+  - `<LocalLeader>ss` -> Sync syntax from start
+- ToggleList
+  - Location List
+    - `<Leader>lt` Toggle list
+    - `<Leader>ln` Display next item
+    - `<Leader>lp` Display previous item
+  - Quickfix List
+    - `<Leader>qt` Toggle list
+    - `<Leader>qn` Display next item
+    - `<Leader>qp` Display previous item
