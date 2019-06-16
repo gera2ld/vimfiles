@@ -55,7 +55,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Git
 Plug 'tpope/vim-fugitive'
 
-Plug 'elentok/plaintasks.vim'
+"Plug 'elentok/plaintasks.vim'
+"Plug 'freitass/todo.txt-vim'
+Plug 'jceb/vim-orgmode'
 
 call plug#end()
 
