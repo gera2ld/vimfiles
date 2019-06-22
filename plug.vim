@@ -25,7 +25,7 @@ Plug 'Galooshi/vim-import-js', { 'do': 'npm i -g import-js' }
 Plug 'cespare/vim-toml'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'neomake/neomake'            " obsolete
 " Plug 'dojoteef/neomake-autolint'  " obsolete
 
