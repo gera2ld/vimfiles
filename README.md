@@ -31,7 +31,7 @@ $ git clone git@github.com:gera2ld/vimfiles.git .vim
 For **Vim** (not MacVim) on **Mac OS X**:
 
 ```sh
-$ echo 'so ~/.vim/vimrc' >> ~/.vimrc
+$ ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
 For **NeoVim**:
@@ -49,7 +49,9 @@ $ ln -s ~/.vim/vimrc ~/.vim/init.vim
   $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   ```
 
-  Then install plugins by executing `:PlugInstall` in Vim or NeoVim.
+You may also need Python 3 and Node.js.
+
+Then install plugins by executing `:PlugInstall` in Vim or NeoVim.
 
 ## Features
 
