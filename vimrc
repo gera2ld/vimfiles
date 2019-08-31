@@ -107,7 +107,6 @@ else
   se dir=/tmp//
   se undodir=/tmp//
 endif
-colo desert
 ru plug.vim
 ru mappings.vim
 
