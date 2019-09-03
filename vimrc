@@ -81,6 +81,9 @@ se vb t_vb=    " remove visual bell, must be reset in _gvimrc
 se ts=2 sw=2 et
 au FileType make setl noet
 
+" Enable code folding
+se fdm=syntax
+
 " Remove trailing spaces
 fu RTrim()
   let o_pos = getpos('.')
@@ -95,6 +98,8 @@ fu RTrim()
   call setpos('.', o_pos)
 endf
 au BufWritePre,FileWritePre * call RTrim()
+
+au BufNewFile,BufRead *.ejs set ft=html
 
 se undofile
 if has('win32')
@@ -113,7 +118,5 @@ ru mappings.vim
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
-
-au BufNewFile,BufRead *.ejs set ft=html
 
 " vim:sw=2 sts=2
