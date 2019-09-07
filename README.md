@@ -43,15 +43,27 @@ $ ln -s ~/.vim/vimrc ~/.vim/init.vim
 
 ### Plugin Installation
 
+You may also need Python 3 and Node.js.
+
 - Install [vim-plug](https://github.com/junegunn/vim-plug)
 
   ```sh
   $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   ```
 
-You may also need Python 3 and Node.js.
+  Then install plugins by executing `:PlugInstall` in Vim or NeoVim.
 
-Then install plugins by executing `:PlugInstall` in Vim or NeoVim.
+- Install Node.js dependencies
+
+  ```sh
+  $ yarn global add import-js
+  ```
+
+- Install CoC plugins
+
+  ```viml
+  :CocInstall coc-lists coc-eslint coc-json coc-snippets coc-git coc-pairs coc-highlight coc-emmet coc-yank coc-html coc-css coc-vetur coc-tsserver
+  ```
 
 ## Features
 
@@ -66,7 +78,7 @@ Then install plugins by executing `:PlugInstall` in Vim or NeoVim.
   - `<LocalLeader>jb` -> JSON beautify
   - `<LocalLeader>jc` -> JSON compact
 - Searching
-  - `<Leader>f` -> `FZF`
+  - `<Space>f` -> `CocList files`
   - `gf` -> Try to find a JavaScript file and fallback to FZF if not found by default rule
   - `g*` -> `Ag <cword>`
 - Shell
@@ -74,12 +86,6 @@ Then install plugins by executing `:PlugInstall` in Vim or NeoVim.
   - `<LocalLeader>vsh` -> Open shell in a vertically splitted window
 - Other
   - `<LocalLeader>ss` -> Sync syntax from start
-- ToggleList
-  - Location List
-    - `<Leader>lt` Toggle list
-    - `<Leader>ln` Display next item
-    - `<Leader>lp` Display previous item
-  - Quickfix List
-    - `<Leader>qt` Toggle list
-    - `<Leader>qn` Display next item
-    - `<Leader>qp` Display previous item
+- Import JS
+  - `<Leader>i` -> `ImportJSFix`
+  - `<Leader>j` -> `ImportJSWord`
