@@ -113,6 +113,7 @@ else
   se undodir=/tmp//
 endif
 ru plug.vim
+ru coc.vim
 ru mappings.vim
 
 if filereadable(glob("~/.vimrc.local"))
