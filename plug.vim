@@ -32,8 +32,8 @@ Plug 'fatih/vim-go'
 
 " UI
 Plug 'bling/vim-airline'
-"Plug 'taglist.vim'
-Plug 'majutsushi/tagbar'
+Plug 'enricobacis/vim-airline-clock'
+Plug 'bling/vim-bufferline'
 
 " NERD tree
 Plug 'scrooloose/nerdtree'
@@ -61,7 +61,9 @@ se cino=:0
 let g:javascript_opfirst = '\%([<>,?^%|*&]\|\/[^/*]\|\([-:+]\)\1\@!\|=>\@!\|in\%(stanceof\)\=\>\)'
 let g:javascript_continuation = '\%([<=,?/*^%|&:]\|+\@<!+\|-\@<!-\|=\@<!>\|\<in\%(stanceof\)\=\)'
 
-autocmd VimEnter * let g:airline_section_b = '%{strftime("%c")}'
+" airline and related
+let g:airline#extensions#clock#format = '%H:%M:%S'
+let g:bufferline_echo = 0
 
 " Ack / Ag
 if executable('ag')

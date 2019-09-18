@@ -89,3 +89,6 @@ You may also need Python 3 and Node.js.
 - Import JS
   - `<Leader>i` -> `ImportJSFix`
   - `<Leader>j` -> `ImportJSWord`
+- Buffer
+  - `<Leader>bn` -> `bn` Open next buffer
+  - `<Leader>bN` -> `bN` Open previous buffer

@@ -1,7 +1,3 @@
-se cmdheight=2
-se updatetime=300
-se shortmess+=c
-
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>

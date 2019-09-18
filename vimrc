@@ -77,6 +77,9 @@ se nowb nu
 map <silent> <down> gj
 map <silent> <up> gk
 se vb t_vb=    " remove visual bell, must be reset in _gvimrc
+se cmdheight=2
+se updatetime=300
+se shortmess+=c
 
 se ts=2 sw=2 et
 au FileType make setl noet

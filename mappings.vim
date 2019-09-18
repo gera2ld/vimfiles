@@ -4,6 +4,10 @@ nmap <Leader>nT :NERDTreeToggle<CR>
 nmap <Leader>nc :NERDTreeCWD<CR>
 nmap <Leader>nf :NERDTreeFind<CR>
 
+" Buffer
+nmap <Leader>bn :bn<CR>
+nmap <Leader>bN :bN<CR>
+
 ca Ag Ack
 nmap g* :exe 'Ag \\\b' . expand('<cword>') . '\\\b'<CR>
 
