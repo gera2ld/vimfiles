@@ -82,10 +82,11 @@ You may also need Python 3 and Node.js.
   - `gf` -> Try to find a JavaScript file and fallback to FZF if not found by default rule
   - `g*` -> `Ag <cword>`
 - Shell
-  - `<LocalLeader>sh` -> Open shell in current window
-  - `<LocalLeader>vsh` -> Open shell in a vertically splitted window
+  - `<Leader>te` -> Open shell in current window
+  - `<Leader>ts` -> Open shell in a horizontally splitted window
+  - `<Leader>tv` -> Open shell in a vertically splitted window
 - Other
-  - `<LocalLeader>ss` -> Sync syntax from start
+  - `<Leader>fs` -> Sync syntax from start
 - Import JS
   - `<Leader>i` -> `ImportJSFix`
   - `<Leader>j` -> `ImportJSWord`

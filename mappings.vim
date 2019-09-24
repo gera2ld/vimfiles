@@ -11,7 +11,8 @@ nmap <Leader>bN :bN<CR>
 ca Ag Ack
 nmap g* :exe 'Ag \\\b' . expand('<cword>') . '\\\b'<CR>
 
-nmap <Leader>ss :syntax sync fromstart<CR>
+nmap <Leader>fs :syntax sync fromstart<CR>
 
-nmap <Leader>sh :te<CR>
-nmap <Leader>vsh :vs term://$SHELL<CR>
+nmap <Leader>te :te<CR>
+nmap <Leader>ts :sp term://$SHELL<CR>
+nmap <Leader>tv :vs term://$SHELL<CR>
