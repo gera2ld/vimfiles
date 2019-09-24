@@ -45,6 +45,7 @@ Plug 'tpope/vim-fugitive'
 "Plug 'elentok/plaintasks.vim'
 "Plug 'freitass/todo.txt-vim'
 Plug 'jceb/vim-orgmode'
+Plug 'mtth/scratch.vim'
 
 " Theme
 Plug 'joshdick/onedark.vim'
