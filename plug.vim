@@ -33,7 +33,6 @@ Plug 'fatih/vim-go'
 " UI
 Plug 'bling/vim-airline'
 Plug 'enricobacis/vim-airline-clock'
-Plug 'bling/vim-bufferline'
 
 " NERD tree
 Plug 'scrooloose/nerdtree'

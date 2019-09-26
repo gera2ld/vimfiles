@@ -56,6 +56,8 @@ nnoremap <silent> <space>c  :<C-u>CocList commands<CR>
 nnoremap <silent> <space>o  :<C-u>CocList outline<CR>
 " Search workspace symbols
 nnoremap <silent> <space>s  :<C-u>CocList -I symbols<CR>
+" Search buffer list
+nnoremap <silent> <space>b  :<C-u>CocList buffers<CR>
 " Do default action for next item.
 nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
