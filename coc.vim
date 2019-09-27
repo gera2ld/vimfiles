@@ -58,6 +58,8 @@ nnoremap <silent> <space>o  :<C-u>CocList outline<CR>
 nnoremap <silent> <space>s  :<C-u>CocList -I symbols<CR>
 " Search buffer list
 nnoremap <silent> <space>b  :<C-u>CocList buffers<CR>
+" Yank list
+nnoremap <silent> <space>y  :<C-u>CocList yank<CR>
 " Do default action for next item.
 nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
