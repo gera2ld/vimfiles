@@ -9,7 +9,7 @@ let g:NERDSpaceDelims = 1
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'jeroenbourgois/vim-actionscript'
 Plug 'mileszs/ack.vim'
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'junegunn/fzf.vim'
 Plug 'lepture/vim-jinja'
 Plug 'editorconfig/editorconfig-vim', { 'do': 'pip3 install editorconfig' }

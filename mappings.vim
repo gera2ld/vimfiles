@@ -4,6 +4,9 @@ nmap <Leader>nT :NERDTreeToggle<CR>
 nmap <Leader>nc :NERDTreeCWD<CR>
 nmap <Leader>nf :NERDTreeFind<CR>
 
+" Search
+nmap <Leader>f :FZF<CR>
+
 " Buffer
 nmap <Leader>bn :bn<CR>
 nmap <Leader>bN :bN<CR>
