@@ -69,11 +69,12 @@ You may also need Python 3 and Node.js.
 
 ### Mappings
 
-- NERDTree
-  - `<Leader>nt` -> `NERDTree`
-  - `<Leader>nT` -> `NERDTreeToggle`
-  - `<Leader>nc` -> `NERDTreeCWD`
-  - `<Leader>nf` -> `NERDTreeFind`
+- Open a file browser ([vim-dirvish](https://github.com/justinmk/vim-dirvish))
+  - `<Leader>e` -> open in the current window
+  - `<Leader>et` -> split window horizontally and open above the current window
+  - `<Leader>eb` -> split window horizontally and open below the current window
+  - `<Leader>el` -> split window vertically and open left to the current window
+  - `<Leader>er` -> split window vertically and open right to the current window
 - JSON (`*.json` only)
   - `<LocalLeader>jb` -> JSON beautify
   - `<LocalLeader>jc` -> JSON compact
@@ -86,7 +87,7 @@ You may also need Python 3 and Node.js.
   - `<Leader>ts` -> Open shell in a horizontally splitted window
   - `<Leader>tv` -> Open shell in a vertically splitted window
 - Other
-  - `<Leader>fs` -> Sync syntax from start
+  - `<Leader>sy` -> Sync syntax from start
 - Import JS
   - `<Leader>i` -> `ImportJSFix`
   - `<Leader>j` -> `ImportJSWord`

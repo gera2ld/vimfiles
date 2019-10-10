@@ -4,17 +4,14 @@ call plug#begin(s:plugged)
 Plug 'gera2ld/go-to-js'
 
 Plug 'scrooloose/nerdcommenter'
-let g:NERDSpaceDelims = 1
-
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'jeroenbourgois/vim-actionscript'
-Plug 'mileszs/ack.vim'
+Plug 'gabesoft/vim-ags'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'junegunn/fzf.vim'
 Plug 'lepture/vim-jinja'
 Plug 'editorconfig/editorconfig-vim', { 'do': 'pip3 install editorconfig' }
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'Galooshi/vim-import-js', { 'do': 'npm i -g import-js' }
+Plug 'Galooshi/vim-import-js'
 Plug 'cespare/vim-toml'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'honza/vim-snippets'
@@ -33,10 +30,8 @@ Plug 'fatih/vim-go'
 " UI
 Plug 'bling/vim-airline'
 Plug 'enricobacis/vim-airline-clock'
-
-" NERD tree
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'justinmk/vim-dirvish'
+Plug 'kristijanhusak/vim-dirvish-git'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -51,11 +46,16 @@ Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
+" nerdcommenter
+let g:NERDSpaceDelims = 1
+
+" vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
-let NERDTreeShowHidden = 1
+
+" vim-jsx
 let g:jsx_ext_required = 0
 
-" for vim-javascript
+" vim-javascript
 se cino=:0
 " Remove dots to avoid indentation for chained function calls
 let g:javascript_opfirst = '\%([<>,?^%|*&]\|\/[^/*]\|\([-:+]\)\1\@!\|=>\@!\|in\%(stanceof\)\=\>\)'
@@ -63,12 +63,6 @@ let g:javascript_continuation = '\%([<=,?/*^%|&:]\|+\@<!+\|-\@<!-\|=\@<!>\|\<in\
 
 " airline and related
 let g:airline#extensions#clock#format = '%H:%M:%S'
-let g:bufferline_echo = 0
-
-" Ack / Ag
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
 
 " go-to-js
 function! SearchFile(cfile)
