@@ -70,11 +70,15 @@ You may also need Python 3 and Node.js.
 ### Mappings
 
 - Open a file browser ([vim-dirvish](https://github.com/justinmk/vim-dirvish))
-  - `<Leader>e` -> open in the current window
-  - `<Leader>et` -> split window horizontally and open above the current window
-  - `<Leader>eb` -> split window horizontally and open below the current window
-  - `<Leader>el` -> split window vertically and open left to the current window
-  - `<Leader>er` -> split window vertically and open right to the current window
+  - Open current working directory
+    - `<Leader>ew` -> in the current window
+    - `<Leader>et` -> split horizontally and open above the current window
+    - `<Leader>eb` -> split horizontally and open below the current window
+    - `<Leader>el` -> split vertically and open left to the current window
+    - `<Leader>er` -> split vertically and open right to the current window
+  - Open directory of current file
+    - `<Leader>e[W]` -> in the current window
+    - `<Leader>e{TBLR}` -> same as `<Leader>e[tblr]`
 - JSON (`*.json` only)
   - `<LocalLeader>jb` -> JSON beautify
   - `<LocalLeader>jc` -> JSON compact
