@@ -87,20 +87,21 @@ au FileType make setl noet
 " Enable code folding
 se fdm=syntax
 
-" Remove trailing spaces
-fu RTrim()
+" Remove trailing spaces {{{
+fu s:TrimEnd()
   let o_pos = getpos('.')
   " e flag for suppressing errors
   if exists('b:current_syntax') && b:current_syntax == 'markdown'
     " only empty lines are trimmed
-    exe '%s/^\s\+$//e'
+    %s/^\s\+$//e
   else
-    exe '%s/\s\+$//e'
+    %s/\s\+$//e
   en
-  exe '%s/\r$//e'
+  %s/\r$//e
   call setpos('.', o_pos)
 endf
-au BufWritePre,FileWritePre * call RTrim()
+au BufWritePre,FileWritePre * call s:TrimEnd()
+" }}}
 
 au BufNewFile,BufRead *.ejs set ft=html
 
@@ -123,4 +124,4 @@ if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
-" vim:sw=2 sts=2
+" vim: sw=2 sts=2 fdm=marker

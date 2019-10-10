@@ -46,30 +46,36 @@ Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
-" nerdcommenter
+" nerdcommenter {{{
 let g:NERDSpaceDelims = 1
+" }}}
 
-" vim-indent-guides
+" vim-indent-guides {{{
 let g:indent_guides_enable_on_vim_startup = 1
+" }}}
 
-" vim-jsx
+" vim-jsx {{{
 let g:jsx_ext_required = 0
+" }}}
 
-" vim-javascript
+" vim-javascript {{{
 se cino=:0
 " Remove dots to avoid indentation for chained function calls
 let g:javascript_opfirst = '\%([<>,?^%|*&]\|\/[^/*]\|\([-:+]\)\1\@!\|=>\@!\|in\%(stanceof\)\=\>\)'
 let g:javascript_continuation = '\%([<=,?/*^%|&:]\|+\@<!+\|-\@<!-\|=\@<!>\|\<in\%(stanceof\)\=\)'
+" }}}
 
-" airline and related
+" airline and related {{{
 let g:airline#extensions#clock#format = '%H:%M:%S'
+" }}}
 
-" go-to-js
+" go-to-js {{{
 function! SearchFile(cfile)
   exec 'CocList -S --input=' . a:cfile . ' files'
 endfunction
+" }}}
 
-" onedark
+" onedark {{{
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
@@ -86,3 +92,6 @@ if (empty($TMUX))
   endif
 endif
 colo onedark
+" }}}
+
+" vim: sw=2 sts=2 fdm=marker
