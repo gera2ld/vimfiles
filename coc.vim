@@ -78,3 +78,6 @@ function! s:select_current_word()
   endif
   return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
 endfunc
+
+" coc-pairs
+autocmd FileType vim let b:coc_pairs_disabled = ['"']
