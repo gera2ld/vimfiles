@@ -3,30 +3,30 @@ nmap <Leader>f :FZF<CR>
 
 " Dirvish mappings {{{
 function s:ShowDir(...)
-  let l:direction = get(a:, 1, '')
-  let l:root = get(a:, 2, '')
-  if l:direction == 't'
-    let l:command = 'split | '
-  elseif l:direction == 'b'
-    let l:command = 'rightbelow split | '
-  elseif l:direction == 'l'
-    let l:command = 'vsplit | '
-  elseif l:direction == 'r'
-    let l:command = 'rightbelow vsplit | '
+  let direction = get(a:, 1, '')
+  let root = get(a:, 2, '')
+  if direction == 't'
+    let command = 'split | '
+  elseif direction == 'b'
+    let command = 'rightbelow split | '
+  elseif direction == 'l'
+    let command = 'vsplit | '
+  elseif direction == 'r'
+    let command = 'rightbelow vsplit | '
   else
-    let l:command = ''
+    let command = ''
   endif
-  let l:command .= 'Dirvish'
-  if !empty(l:root) && l:root !~ '/$'
-    let l:root = expand(l:root . ':p:h')
-    if !isdirectory(l:root)
-      let l:root = ''
+  let command .= 'Dirvish'
+  if !empty(root) && root !~ '/$'
+    let root = expand(root . ':p:h')
+    if !isdirectory(root)
+      let root = ''
     endif
   endif
-  if !empty(l:root)
-    let l:command .= ' ' . l:root
+  if !empty(root)
+    let command .= ' ' . root
   endif
-  exec l:command
+  exec command
 endfunction
 
 nmap <Leader>e  :call <SID>ShowDir('', '%')<CR>
