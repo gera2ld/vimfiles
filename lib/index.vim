@@ -97,18 +97,18 @@ if has('win32')
   se dir=$TEMP//
   se undodir=$TEMP//
   se mp=mingw32-make
-  so $VIMRUNTIME/delmenu.vim
-  so $VIMRUNTIME/menu.vim
+  ru delmenu.vim
+  ru menu.vim
 else
   se dir=/tmp//
   se undodir=/tmp//
 endif
-ru plug.vim
-ru coc.vim
-ru mappings.vim
+ru lib/plug.vim
+ru lib/coc.vim
+ru lib/mappings.vim
 
 if filereadable(glob("~/.vimrc.local"))
-  source ~/.vimrc.local
+  so ~/.vimrc.local
 endif
 
 " vim:sw=2:sts=2:fdm=marker:

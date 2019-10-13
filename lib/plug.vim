@@ -1,4 +1,4 @@
-let s:plugged = expand('<sfile>:p:h') . '/plugged'
+let s:plugged = expand('<sfile>:p:h:h') . '/plugged'
 call plug#begin(s:plugged)
 
 Plug 'gera2ld/go-to-js'
