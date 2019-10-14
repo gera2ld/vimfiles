@@ -34,14 +34,6 @@ $ git clone git@github.com:gera2ld/vimfiles.git ~/.vim
 $ sh ~/.vim/install.sh
 ```
 
-### Plugin Installation
-
-- Install CoC plugins
-
-  ```viml
-  :CocInstall coc-lists coc-eslint coc-json coc-snippets coc-git coc-pairs coc-highlight coc-emmet coc-yank coc-html coc-css coc-vetur coc-tsserver
-  ```
-
 ## Features
 
 ### Mappings

@@ -94,4 +94,4 @@ endif
 colo onedark
 " }}}
 
-" vim: sw=2 sts=2 fdm=marker
+" vim:sw=2:sts=2:fdm=marker:
