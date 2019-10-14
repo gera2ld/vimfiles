@@ -20,7 +20,9 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     "$cwd\autoload\plug.vim"
   )
 )
+# Install Vim plugins
+nvim +PlugInstall +qall
+# Install Coc plugins
 nvim `
-+PlugInstall `
 '+CocInstall -sync coc-lists coc-eslint coc-json coc-snippets coc-git coc-pairs coc-highlight coc-emmet coc-yank coc-html coc-css coc-vetur coc-tsserver' `
 +qall
