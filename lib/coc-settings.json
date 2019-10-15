@@ -1,5 +1,5 @@
 {
-  "git.addGlameToVirtualText": true,
+  "git.addGBlameToVirtualText": true,
   "list.normalMappings": {
     "t": "action:tabe",
     "v": "action:vsplit",
