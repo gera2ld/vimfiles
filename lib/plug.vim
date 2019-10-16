@@ -9,7 +9,7 @@ Plug 'gabesoft/vim-ags'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'junegunn/fzf.vim'
 Plug 'lepture/vim-jinja'
-Plug 'editorconfig/editorconfig-vim', { 'do': 'pip3 install editorconfig' }
+Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'Galooshi/vim-import-js'
 Plug 'cespare/vim-toml'
