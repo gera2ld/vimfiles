@@ -5,14 +5,16 @@ nmap <Leader>f :FZF<CR>
 function s:ShowDir(...)
   let direction = get(a:, 1, '')
   let root = get(a:, 2, '')
-  if direction == 't'
+  if direction == 'k'
     let command = 'split | '
-  elseif direction == 'b'
+  elseif direction == 'j'
     let command = 'rightbelow split | '
-  elseif direction == 'l'
+  elseif direction == 'h'
     let command = 'vsplit | '
-  elseif direction == 'r'
+  elseif direction == 'l'
     let command = 'rightbelow vsplit | '
+  elseif direction == 't'
+    let command = 'tabe | '
   else
     let command = ''
   endif
@@ -31,7 +33,7 @@ endfunction
 
 nmap <silent> <Leader>e :call <SID>ShowDir('', '%')<CR>
 
-for k in ['w', 't', 'b', 'l', 'r']
+for k in ['w', 'k', 'j', 'h', 'l', 't']
   exec 'nmap <silent> <Leader>e' . k . ' :call <SID>ShowDir("'. k . '", "%")<CR>'
   exec 'nmap <silent> <Leader>e' . substitute(k, '\(\w\)', '\u\1', '') . ' :call <SID>ShowDir("'. k . '")<CR>'
 endfor

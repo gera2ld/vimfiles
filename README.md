@@ -39,15 +39,15 @@ $ sh ~/.vim/install.sh
 ### Mappings
 
 - Open a file browser ([vim-dirvish](https://github.com/justinmk/vim-dirvish))
-  - Open current working directory
-    - `<Leader>ew` -> in the current window
-    - `<Leader>et` -> split horizontally and open above the current window
-    - `<Leader>eb` -> split horizontally and open below the current window
-    - `<Leader>el` -> split vertically and open left to the current window
-    - `<Leader>er` -> split vertically and open right to the current window
   - Open directory of current file
-    - `<Leader>e[W]` -> in the current window
-    - `<Leader>e{TBLR}` -> same as `<Leader>e[tblr]`
+    - `<Leader>ew` -> in the current window
+    - `<Leader>ek` -> split horizontally and open above the current window
+    - `<Leader>ej` -> split horizontally and open below the current window
+    - `<Leader>eh` -> split vertically and open left to the current window
+    - `<Leader>el` -> split vertically and open right to the current window
+    - `<Leader>et` -> in a new tab
+  - Open current working directory
+    - `<Leader>e{WKJHLT}` -> same as `<Leader>e[wkjhlt]`
 - JSON (`*.json` only)
   - `<LocalLeader>jb` -> JSON beautify
   - `<LocalLeader>jc` -> JSON compact
