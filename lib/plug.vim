@@ -23,6 +23,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'posva/vim-vue'
 Plug 'leafgarland/typescript-vim'
 Plug 'tikhomirov/vim-glsl'
+Plug 'jparise/vim-graphql'
 
 " Go
 Plug 'fatih/vim-go'
