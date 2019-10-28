@@ -1,24 +1,40 @@
 " Files
 nmap <Leader>f :FZF<CR>
 
+" Split window command {{{
+function s:SplitCommand(...)
+  let direction = get(a:, 1, '')
+  let and_then = get(a:, 2, '')
+  if direction == 'k'
+    let command = 'split'
+  elseif direction == 'j'
+    let command = 'rightbelow split'
+  elseif direction == 'h'
+    let command = 'vsplit'
+  elseif direction == 'l'
+    let command = 'rightbelow vsplit'
+  elseif direction == 't'
+    let command = 'tabe'
+  else
+    let command = ''
+  endif
+  if and_then != ''
+    let command .= ' | ' . and_then
+  endif
+  return command
+endfunction
+" }}}
+
+" Split windows
+for k in ['k', 'j', 'h', 'l', 't']
+  exec 'nmap <silent> <Leader>w' . k . ' :' . s:SplitCommand(k) . '<CR>'
+endfor
+
 " Dirvish mappings {{{
 function s:ShowDir(...)
   let direction = get(a:, 1, '')
   let root = get(a:, 2, '')
-  if direction == 'k'
-    let command = 'split | '
-  elseif direction == 'j'
-    let command = 'rightbelow split | '
-  elseif direction == 'h'
-    let command = 'vsplit | '
-  elseif direction == 'l'
-    let command = 'rightbelow vsplit | '
-  elseif direction == 't'
-    let command = 'tabe | '
-  else
-    let command = ''
-  endif
-  let command .= 'Dirvish'
+  let command = s:SplitCommand(direction, 'Dirvish')
   if !empty(root) && root !~ '/$'
     let root = expand(root . ':p:h')
     if !isdirectory(root)
