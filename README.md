@@ -13,7 +13,7 @@ Install Python 3 and Node.js first.
 - Install Python dependencies
 
   ```sh
-  $ pip3 install pynvim
+  $ pip3 install pynvim pylint
   ```
 
 ### Config Preparation
