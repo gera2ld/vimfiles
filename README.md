@@ -18,20 +18,10 @@ Install Python 3 and Node.js first.
 
 ### Config Preparation
 
-#### Windows
-
-Run in PowerShell:
-
 ```ps
-$ git clone git@github.com:gera2ld/vimfiles.git $HOME/.vim
-$ &"$HOME/.vim/install.ps1"
-```
-
-#### Unix & OS X
-
-```sh
-$ git clone git@github.com:gera2ld/vimfiles.git ~/.vim
-$ sh ~/.vim/install.sh
+$ git clone git@github.com:gera2ld/vimfiles.git
+$ cd vimfiles
+$ python3 install.py
 ```
 
 ## Features
