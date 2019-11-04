@@ -111,4 +111,10 @@ if filereadable(glob("~/.vimrc.local"))
   so ~/.vimrc.local
 endif
 
+if len(get(g:, 'python3_host_prog', '')) > 0
+  call coc#config('python', {
+        \ 'pythonPath': g:python3_host_prog
+        \ })
+endif
+
 " vim:sw=2:sts=2:fdm=marker:
