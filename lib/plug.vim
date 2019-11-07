@@ -42,6 +42,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'jceb/vim-orgmode'
 Plug 'mtth/scratch.vim'
 
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 " Theme
 Plug 'joshdick/onedark.vim'
 
