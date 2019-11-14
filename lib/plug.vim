@@ -44,7 +44,7 @@ Plug 'mtth/scratch.vim'
 
 " Markdown
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'gera2ld/vim-markdown'
 Plug 'gera2ld/vim-reveal'
 
 " Theme
