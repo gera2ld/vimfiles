@@ -15,6 +15,7 @@ Plug 'Galooshi/vim-import-js'
 Plug 'cespare/vim-toml'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'honza/vim-snippets'
+Plug 'skywind3000/asyncrun.vim'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
