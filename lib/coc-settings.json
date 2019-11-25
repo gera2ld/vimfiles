@@ -1,4 +1,11 @@
 {
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
   "git.addGBlameToVirtualText": true,
   "list.normalMappings": {
     "t": "action:tabe",
@@ -12,6 +19,8 @@
     "<C-w>": "command:wincmd k"
   },
   "snippets.extends": {
-    "javascriptreact": ["javascript"]
+    "javascriptreact": [
+      "javascript"
+    ]
   }
 }
