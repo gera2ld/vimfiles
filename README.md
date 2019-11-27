@@ -2,17 +2,21 @@
 
 ## Usage
 
-Install Python 3 and Node.js first.
+### Dependencies
 
-- Install Node.js dependencies
+- ripgrep
+
+- Node.js
 
   ```sh
+  # Install Node.js dependencies
   $ yarn global add import-js neovim
   ```
 
-- Install Python dependencies
+- Python 3
 
   ```sh
+  # Install Python dependencies
   $ pip3 install pynvim pylint jedi
   ```
 
