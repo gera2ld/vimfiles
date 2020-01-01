@@ -67,4 +67,7 @@ nmap <Leader>te :te<CR>
 nmap <Leader>ts :sp term://$SHELL<CR>
 nmap <Leader>tv :vs term://$SHELL<CR>
 
+nmap <silent> <Leader>tr <Plug>TranslateW
+vmap <silent> <Leader>tr <Plug>TranslateWV
+
 " vim:sw=2:sts=2:fdm=marker:

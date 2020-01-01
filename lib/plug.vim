@@ -16,7 +16,9 @@ Plug 'cespare/vim-toml'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'honza/vim-snippets'
 Plug 'skywind3000/asyncrun.vim'
+Plug 'voldikss/vim-translator'
 " Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
+Plug 'gyim/vim-boxdraw'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
