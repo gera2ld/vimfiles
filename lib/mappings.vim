@@ -4,7 +4,6 @@ nmap <Leader>f :FZF<CR>
 " Split window command {{{
 function s:SplitCommand(...)
   let direction = get(a:, 1, '')
-  let and_then = get(a:, 2, '')
   if direction == 'k'
     let command = 'split'
   elseif direction == 'j'
@@ -18,15 +17,12 @@ function s:SplitCommand(...)
   else
     let command = ''
   endif
-  if and_then != ''
-    let command .= ' | ' . and_then
-  endif
   return command
 endfunction
 " }}}
 
 " Split windows
-for k in ['k', 'j', 'h', 'l', 't']
+for k in split('kjhlt', '\zs')
   exec 'nmap <silent> <Leader>w' . k . ' :' . s:SplitCommand(k) . '<CR>'
 endfor
 
@@ -34,7 +30,7 @@ endfor
 function s:ShowDir(...)
   let direction = get(a:, 1, '')
   let root = get(a:, 2, '')
-  let command = s:SplitCommand(direction, 'Dirvish')
+  let command = s:SplitCommand(direction) . ' | Dirvish'
   if !empty(root) && root !~ '/$'
     let root = expand(root . ':p:h')
     if !isdirectory(root)
@@ -49,11 +45,16 @@ endfunction
 
 nmap <silent> <Leader>e :call <SID>ShowDir('', '%')<CR>
 
-for k in ['w', 'k', 'j', 'h', 'l', 't']
-  exec 'nmap <silent> <Leader>e' . k . ' :call <SID>ShowDir("'. k . '", "%")<CR>'
+for k in split('wkjhlt', '\zs')
+  exec 'nmap <silent> <Leader>e' . k . ' :call <SID>ShowDir("' . k . '", "%")<CR>'
   exec 'nmap <silent> <Leader>e' . substitute(k, '\(\w\)', '\u\1', '') . ' :call <SID>ShowDir("'. k . '")<CR>'
 endfor
 " }}}
+
+" Terminal
+for k in split('wkjhlt', '\zs')
+  exec 'nmap <silent> <Leader>t' . k . ' :' . s:SplitCommand(k) . ' \| term<CR>'
+endfor
 
 " Buffer
 nmap <Leader>bn :bn<CR>
@@ -62,10 +63,6 @@ nmap <Leader>bN :bN<CR>
 nmap g* :Ags \b<C-R>=expand('<cword>')<CR>\b<CR>
 
 nmap <Leader>sy :syntax sync fromstart<CR>
-
-nmap <Leader>te :te<CR>
-nmap <Leader>ts :sp term://$SHELL<CR>
-nmap <Leader>tv :vs term://$SHELL<CR>
 
 nmap <silent> <Leader>tr <Plug>TranslateW
 vmap <silent> <Leader>tr <Plug>TranslateWV
