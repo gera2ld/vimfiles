@@ -74,7 +74,23 @@ def install_plugins():
     # Install Coc plugins
     subprocess.run([
       vim_exe,
-      '+CocInstall -sync coc-lists coc-eslint coc-json coc-snippets coc-git coc-pairs coc-highlight coc-emmet coc-yank coc-html coc-css coc-vetur coc-tsserver coc-python',
+      '+CocInstall -sync'
+      ' coc-css'
+      ' coc-emmet'
+      ' coc-eslint'
+      ' coc-git'
+      ' coc-highlight'
+      ' coc-html'
+      ' coc-json'
+      ' coc-lists'
+      ' coc-markmap'
+      ' coc-pairs'
+      ' coc-python'
+      ' coc-snippets'
+      ' coc-tsserver'
+      ' coc-vetur'
+      ' coc-yank'
+      ,
       '+qall',
     ], check=True)
 
