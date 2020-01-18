@@ -4,6 +4,8 @@ import shutil
 import subprocess
 
 root = os.path.abspath(os.path.dirname(__file__))
+# Vim in Windows does not support `\\`
+root = root.replace('\\', '/')
 vim_exe = None
 
 def write_vimrc():
