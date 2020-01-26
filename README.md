@@ -25,7 +25,12 @@
 ```ps
 $ git clone git@github.com:gera2ld/vimfiles.git
 $ cd vimfiles
+
 $ python3 install.py
+# Or use a proxy
+$ HTTP_PROXY=http://localhost:1086 HTTPS_PROXY=http://localhost:1086 python3 install.py
+# Or use a proxy in Windows
+$ npx cross-env HTTP_PROXY=http://localhost:1086 HTTPS_PROXY=http://localhost:1086 python3 install.py
 ```
 
 ## Features
