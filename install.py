@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import sys
 import shutil
 import subprocess
 
@@ -35,7 +36,7 @@ def install_for_nvim():
     if vim_exe is None:
         vim_exe = exe
     print('Install for NeoVim...')
-    config_dir = os.path.expanduser('~/.config/nvim')
+    config_dir = os.path.expanduser('~/AppData/Local/nvim' if sys.platform == 'win32' else '~/.config/nvim')
     os.makedirs(config_dir, exist_ok=True)
     symlink_force(os.path.join(root, 'vimrc'), os.path.join(config_dir, 'init.vim'))
     symlink_force(os.path.join(root, 'lib/coc-settings.json'), os.path.join(config_dir, 'coc-settings.json'))
