@@ -107,6 +107,8 @@ ru lib/plug.vim
 ru lib/coc.vim
 ru lib/mappings.vim
 
+let g:loaded_python_provider = 0
+
 if filereadable(glob("~/.vimrc.local"))
   so ~/.vimrc.local
 endif
