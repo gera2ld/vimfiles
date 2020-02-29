@@ -59,20 +59,19 @@ if !exists(":DiffOrig")
       \ | wincmd p | diffthis
 endif
 
-se enc=utf-8 fencs=ucs-bom,utf-8,cp936 ff=unix
-se nowb nu
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936 fileformat=unix
+set nowritebackup
+set number
 map <silent> <down> gj
 map <silent> <up> gk
-se vb t_vb=    " remove visual bell, must be reset in _gvimrc
-se cmdheight=2
-se updatetime=300
-se shortmess+=c
-
-se ts=2 sw=2 et
-au FileType make setl noet
-
-" Enable code folding
-se fdm=syntax
+set visualbell t_vb=    " remove visual bell, must be reset in _gvimrc
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set virtualedit=all
+set tabstop=2 shiftwidth=2 expandtab
+set foldmethod=syntax " Enable code folding
+au FileType make setl noexpandtab
 
 " Remove trailing spaces {{{
 fu s:TrimEnd()
@@ -90,7 +89,7 @@ endf
 au BufWritePre,FileWritePre * call s:TrimEnd()
 " }}}
 
-au BufNewFile,BufRead *.ejs set ft=html
+au BufNewFile,BufRead *.ejs set filetype=html
 
 se undofile
 if has('win32')

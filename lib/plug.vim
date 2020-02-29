@@ -3,11 +3,17 @@ call plug#begin(s:plugged)
 
 Plug 'gera2ld/go-to-js'
 
+if $FZF_HOME != ''
+  Plug $FZF_HOME
+else
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+endif
+" Plug 'junegunn/fzf.vim'
+
 Plug 'scrooloose/nerdcommenter'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'gabesoft/vim-ags'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" Plug 'junegunn/fzf.vim'
+
 Plug 'lepture/vim-jinja'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim'
@@ -19,6 +25,7 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'voldikss/vim-translator'
 " Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
 Plug 'gyim/vim-boxdraw'
+Plug 'camspiers/animate.vim'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
@@ -116,6 +123,12 @@ let g:ags_agargs = {
   \ '--color'          : ['always',''],
   \ '--colors'         : [['match:fg:green', 'match:bg:black', 'match:style:nobold', 'path:fg:red', 'path:style:bold', 'line:fg:black', 'line:style:bold'] ,''],
   \ }
+
+" animate
+nnoremap <silent> <Up>    :call animate#window_delta_height(10)<CR>
+nnoremap <silent> <Down>  :call animate#window_delta_height(-10)<CR>
+nnoremap <silent> <Left>  :call animate#window_delta_width(10)<CR>
+nnoremap <silent> <Right> :call animate#window_delta_width(-10)<CR>
 
 " vim:sw=2:sts=2:fdm=marker:
 "

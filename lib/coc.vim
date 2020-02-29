@@ -83,3 +83,5 @@ endfunc
 
 " coc-pairs
 autocmd FileType vim let b:coc_pairs_disabled = ['"']
+
+" let g:coc_node_args = ['--nolazy', '--inspect-brk=6045']
