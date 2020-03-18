@@ -28,11 +28,11 @@ Plug 'gyim/vim-boxdraw'
 Plug 'camspiers/animate.vim'
 
 " JavaScript
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'yuezk/vim-js'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'digitaltoad/vim-pug'
 Plug 'posva/vim-vue'
-Plug 'leafgarland/typescript-vim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'jparise/vim-graphql'
 
@@ -64,22 +64,12 @@ Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " nerdcommenter {{{
+" Add a space after the left delimiter and before the right delimiter
 let g:NERDSpaceDelims = 1
 " }}}
 
 " vim-indent-guides {{{
 let g:indent_guides_enable_on_vim_startup = 1
-" }}}
-
-" vim-jsx {{{
-let g:jsx_ext_required = 0
-" }}}
-
-" vim-javascript {{{
-se cino=:0
-" Remove dots to avoid indentation for chained function calls
-let g:javascript_opfirst = '\%([<>,?^%|*&]\|\/[^/*]\|\([-:+]\)\1\@!\|=>\@!\|in\%(stanceof\)\=\>\)'
-let g:javascript_continuation = '\%([<=,?/*^%|&:]\|+\@<!+\|-\@<!-\|=\@<!>\|\<in\%(stanceof\)\=\)'
 " }}}
 
 " airline and related {{{
