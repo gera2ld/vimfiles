@@ -17,7 +17,6 @@ Plug 'gabesoft/vim-ags'
 Plug 'lepture/vim-jinja'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'Galooshi/vim-import-js'
 Plug 'cespare/vim-toml'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'honza/vim-snippets'
@@ -29,13 +28,15 @@ Plug 'camspiers/animate.vim'
 Plug 'rickhowe/diffchar.vim'
 
 " JavaScript
-Plug 'yuezk/vim-js'
+" Plug 'yuezk/vim-js'
+Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'digitaltoad/vim-pug'
 Plug 'posva/vim-vue'
 Plug 'tikhomirov/vim-glsl'
 Plug 'jparise/vim-graphql'
+Plug 'Galooshi/vim-import-js'
 
 " Go
 Plug 'fatih/vim-go'
