@@ -26,6 +26,7 @@ Plug 'voldikss/vim-translator'
 " Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
 Plug 'gyim/vim-boxdraw'
 Plug 'camspiers/animate.vim'
+Plug 'rickhowe/diffchar.vim'
 
 " JavaScript
 Plug 'yuezk/vim-js'
