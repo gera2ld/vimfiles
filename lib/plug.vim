@@ -11,8 +11,11 @@ endif
 " Plug 'junegunn/fzf.vim'
 
 Plug 'scrooloose/nerdcommenter'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'gabesoft/vim-ags'
+Plug 'nathanaelkane/vim-indent-guides'
+
+" indentLine overrides conceallevel and breaks JSON plugins
+" Plug 'Yggdroot/indentLine'
 
 Plug 'lepture/vim-jinja'
 Plug 'editorconfig/editorconfig-vim'
@@ -37,6 +40,7 @@ Plug 'posva/vim-vue'
 Plug 'tikhomirov/vim-glsl'
 Plug 'jparise/vim-graphql'
 Plug 'Galooshi/vim-import-js'
+Plug 'burner/vim-svelte'
 
 " Go
 Plug 'fatih/vim-go'
@@ -103,7 +107,7 @@ endif
 colo onedark
 " }}}
 
-" ags
+" ags {{{
 let g:ags_agexe = 'rg'
 let g:ags_agargs = {
   \ '--column'         : ['', ''],
@@ -115,12 +119,17 @@ let g:ags_agargs = {
   \ '--color'          : ['always',''],
   \ '--colors'         : [['match:fg:green', 'match:bg:black', 'match:style:nobold', 'path:fg:red', 'path:style:bold', 'line:fg:black', 'line:style:bold'] ,''],
   \ }
+" }}}
 
-" animate
+" animate {{{
 nnoremap <silent> <Up>    :call animate#window_delta_height(10)<CR>
 nnoremap <silent> <Down>  :call animate#window_delta_height(-10)<CR>
 nnoremap <silent> <Left>  :call animate#window_delta_width(10)<CR>
 nnoremap <silent> <Right> :call animate#window_delta_width(-10)<CR>
+" }}}
+
+" indentLine {{{
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" }}}
 
 " vim:sw=2:sts=2:fdm=marker:
-"

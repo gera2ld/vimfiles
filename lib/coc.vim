@@ -46,12 +46,13 @@ nmap <Leader>ss :call CocAction('runCommand', 'session.save', fnamemodify(getcwd
 nmap <Leader>sl :call CocAction('runCommand', 'session.load', fnamemodify(getcwd(), ':t'))<CR>
 
 " Using CocList
+nnoremap <silent> <space>l  :<C-u>CocList<CR>
 " Show all diagnostics
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<CR>
 " Manage extensions
 nnoremap <silent> <space>e  :<C-u>CocList extensions<CR>
-" Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<CR>
+" Show git commits
+nnoremap <silent> <space>c  :<C-u>CocList commits<CR>
 " Find symbol of current document
 nnoremap <silent> <space>o  :<C-u>CocList outline<CR>
 " Search workspace symbols
