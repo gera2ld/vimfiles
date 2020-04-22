@@ -1,6 +1,3 @@
-" Files
-nmap <Leader>f :FZF<CR>
-
 " Split window command {{{
 function s:SplitCommand(...)
   let direction = get(a:, 1, '')
@@ -56,9 +53,9 @@ for k in split('wkjhlt', '\zs')
   exec 'nmap <silent> <Leader>t' . k . ' :' . s:SplitCommand(k) . ' \| term<CR>'
 endfor
 
-" Buffer
-nmap <Leader>bn :bn<CR>
-nmap <Leader>bN :bN<CR>
+" Files
+nmap <Leader>f :FZF<CR>
+nmap <Leader>a :Ags<Space>
 
 nmap g* :Ags \b<C-R>=expand('<cword>')<CR>\b<CR>
 

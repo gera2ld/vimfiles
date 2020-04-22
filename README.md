@@ -48,14 +48,17 @@ $ npx cross-env HTTP_PROXY=http://localhost:1086 HTTPS_PROXY=http://localhost:10
   - `<LocalLeader>jb` -> JSON beautify
   - `<LocalLeader>jc` -> JSON compact
 - Searching
-  - `<Space>f` -> `CocList files`
+  - `<Leader>f` -> `:FZF`, search files in current directory with FZF
+  - `<Leader>a` -> `:Ags `, start searching with Ags
+  - `<Space>f` -> `:CocList files`, search files in current directory
   - `gf` -> Try to find a JavaScript file and fallback to FZF if not found by default rule
-  - `g*` -> `Ag <cword>`
+  - `g*` -> `:Ags <cword>`
 - Other
   - `<Leader>sy` -> Sync syntax from start
 - Import JS
-  - `<Leader>i` -> `ImportJSFix`
-  - `<Leader>j` -> `ImportJSWord`
+  - `<Leader>i` -> `:ImportJSFix`
+  - `<Leader>j` -> `:ImportJSWord`
 - Buffer
-  - `<Leader>bn` -> `bn` Open next buffer
-  - `<Leader>bN` -> `bN` Open previous buffer
+  - `<Space>b` -> `:CocList buffers`
+- Diagnostics
+  - `<Space>a` -> `:CocList diagnostics`
