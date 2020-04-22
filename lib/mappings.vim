@@ -55,9 +55,9 @@ endfor
 
 " Files
 nmap <Leader>f :FZF<CR>
-nmap <Leader>a :Ags<Space>
+nmap <Leader>a :CtrlSF<Space>
 
-nmap g* :Ags \b<C-R>=expand('<cword>')<CR>\b<CR>
+nmap g* :CtrlSF -R \b<C-R><C-W>\b<CR>
 
 nmap <Leader>sy :syntax sync fromstart<CR>
 
