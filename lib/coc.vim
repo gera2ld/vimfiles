@@ -42,8 +42,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Remap for rename current word
 nmap <Leader>rn <Plug>(coc-rename)
 
-nmap <Leader>ss :call CocAction('runCommand', 'session.save', fnamemodify(getcwd(), ':t'))<CR>
-nmap <Leader>sl :call CocAction('runCommand', 'session.load', fnamemodify(getcwd(), ':t'))<CR>
+nmap <space>Ss :call CocAction('runCommand', 'session.save', fnamemodify(getcwd(), ':t'))<CR>
+nmap <space>Sl :call CocAction('runCommand', 'session.load', fnamemodify(getcwd(), ':t'))<CR>
 
 " Using CocList
 nnoremap <silent> <space>l  :<C-u>CocList<CR>

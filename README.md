@@ -49,7 +49,7 @@ $ npx cross-env HTTP_PROXY=http://localhost:1086 HTTPS_PROXY=http://localhost:10
   - `<LocalLeader>jc` -> JSON compact
 - Searching
   - `<Leader>f` -> `:FZF`, search files in current directory with FZF
-  - `<Leader>a` -> `:CtrlSF `, start searching with Ags
+  - `<Leader>sf` -> `:CtrlSF `, start searching with Ags
   - `<Space>f` -> `:CocList files`, search files in current directory
   - `gf` -> Try to find a JavaScript file and fallback to FZF if not found by default rule
   - `g*` -> `:Ags <cword>`

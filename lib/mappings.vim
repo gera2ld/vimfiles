@@ -55,7 +55,7 @@ endfor
 
 " Files
 nmap <Leader>f :FZF<CR>
-nmap <Leader>a :CtrlSF<Space>
+nmap <Leader>sf :CtrlSF<Space>
 
 nmap g* :CtrlSF -R \b<C-R><C-W>\b<CR>
 

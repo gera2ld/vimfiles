@@ -118,4 +118,11 @@ nnoremap <silent> <Right> :call animate#window_delta_width(-10)<CR>
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " }}}
 
+" ctrlsf.vim {{{
+let g:ctrlsf_auto_close = {
+    \ "normal" : 0,
+    \ "compact": 0
+    \}
+" }}}
+
 " vim:sw=2:sts=2:fdm=marker:

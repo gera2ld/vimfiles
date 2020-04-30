@@ -4,7 +4,8 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "vue"
+    "vue",
+    "svelte"
   ],
   "git.addGBlameToVirtualText": true,
   "list.normalMappings": {
