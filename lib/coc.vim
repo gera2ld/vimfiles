@@ -15,9 +15,8 @@ endfunction
 " Coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" Use `[c` and `]c` to navigate diagnostics
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
+nmap <silent> [d <Plug>(coc-diagnostic-prev)
+nmap <silent> ]d <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
@@ -42,13 +41,23 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Remap for rename current word
 nmap <Leader>rn <Plug>(coc-rename)
 
-nmap <space>Ss :call CocAction('runCommand', 'session.save', fnamemodify(getcwd(), ':t'))<CR>
-nmap <space>Sl :call CocAction('runCommand', 'session.load', fnamemodify(getcwd(), ':t'))<CR>
+" Formatting selected code.
+xmap <leader>fm  <Plug>(coc-format-selected)
+nmap <leader>fm  <Plug>(coc-format-selected)
+
+" Fix current line
+nmap <leader>df  <Plug>(coc-fix-current)
+
+command! -nargs=0   SessionSave   :call CocAction('runCommand', 'session.save', fnamemodify(getcwd(), ':t'))
+command! -nargs=0   SessionLoad   :call CocAction('runCommand', 'session.load', fnamemodify(getcwd(), ':t'))
+command! -nargs=0   Format        :call CocAction('format')
+command! -nargs=?   Fold          :call CocAction('fold', <f-args>)
+command! -nargs=0   OR            :call CocAction('runCommand', 'editor.action.organizeImport')
 
 " Using CocList
 nnoremap <silent> <space>l  :<C-u>CocList<CR>
 " Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<CR>
+nnoremap <silent> <space>d  :<C-u>CocList diagnostics<CR>
 " Manage extensions
 nnoremap <silent> <space>e  :<C-u>CocList extensions<CR>
 " Show git commits

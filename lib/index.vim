@@ -70,7 +70,8 @@ set updatetime=300
 set shortmess+=c
 set virtualedit=all
 set tabstop=2 shiftwidth=2 expandtab
-set foldmethod=syntax " Enable code folding
+" Disable code folding by Vim, use Coc instead
+" set foldmethod=syntax
 au FileType make setl noexpandtab
 
 " Remove trailing spaces {{{

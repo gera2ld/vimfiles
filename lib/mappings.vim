@@ -54,8 +54,11 @@ for k in split('wkjhlt', '\zs')
 endfor
 
 " Files
-nmap <Leader>f :FZF<CR>
-nmap <Leader>sf :CtrlSF<Space>
+nmap <Leader>ff :FZF<CR>
+" Search plain text
+nmap <Leader>sF :CtrlSF<Space>
+" Search by RegExp
+nmap <Leader>sf :CtrlSF -R<Space>
 
 nmap g* :CtrlSF -R \b<C-R><C-W>\b<CR>
 
