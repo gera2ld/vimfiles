@@ -79,7 +79,8 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " Search files in current working directory [coc-list:files]
 nnoremap <silent> <space>f  :<C-u>CocList files<CR>
 
-nnoremap <silent> <space>g <Plug>(coc-git-commit)
+" Show commit that changed current line
+nmap <silent> <space>gc <Plug>(coc-git-commit)
 
 " multiple cursors session
 nmap <silent> <C-x> <Plug>(coc-cursors-word)

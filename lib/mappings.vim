@@ -67,4 +67,6 @@ nmap <Leader>sy :syntax sync fromstart<CR>
 nmap <silent> <Leader>tr <Plug>TranslateW
 vmap <silent> <Leader>tr <Plug>TranslateWV
 
+command! -range=% Markmap CocCommand markmap.create <line1> <line2>
+
 " vim:sw=2:sts=2:fdm=marker:
