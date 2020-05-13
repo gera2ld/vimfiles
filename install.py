@@ -93,6 +93,7 @@ def install_plugins():
       ' coc-tsserver'
       ' coc-vetur'
       ' coc-yank'
+      ' coc-svelte'
       ,
       '+qall',
     ], check=True)
