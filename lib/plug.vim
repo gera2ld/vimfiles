@@ -40,7 +40,7 @@ Plug 'posva/vim-vue'
 Plug 'tikhomirov/vim-glsl'
 Plug 'jparise/vim-graphql'
 Plug 'Galooshi/vim-import-js'
-Plug 'burner/vim-svelte'
+Plug 'evanleck/vim-svelte'
 
 " Go
 Plug 'fatih/vim-go'
