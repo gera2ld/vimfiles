@@ -31,9 +31,9 @@ Plug 'camspiers/animate.vim'
 Plug 'rickhowe/diffchar.vim'
 
 " JavaScript
-" Plug 'yuezk/vim-js'
 Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
+" Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'digitaltoad/vim-pug'
 Plug 'posva/vim-vue'
