@@ -78,6 +78,11 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " Search files in current working directory [coc-list:files]
 nnoremap <silent> <space>f  :<C-u>CocList files<CR>
+" Show bookmarks
+nnoremap <silent> <space>m  :<C-u>CocList bookmark<CR>
+
+nmap <leader>mm <Plug>(coc-bookmark-toggle)
+nmap <leader>ma <Plug>(coc-bookmark-annotate)
 
 " Show commit that changed current line
 nmap <silent> <space>gc <Plug>(coc-git-commit)

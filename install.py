@@ -94,6 +94,7 @@ def install_plugins():
       ' coc-vetur'
       ' coc-yank'
       ' coc-svelte'
+      ' coc-bookmark'
       ,
       '+qall',
     ], check=True)
