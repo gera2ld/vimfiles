@@ -60,8 +60,6 @@ nnoremap <silent> <space>l  :<C-u>CocList<CR>
 nnoremap <silent> <space>d  :<C-u>CocList diagnostics<CR>
 " Manage extensions
 nnoremap <silent> <space>e  :<C-u>CocList extensions<CR>
-" Show git commits
-nnoremap <silent> <space>c  :<C-u>CocList commits<CR>
 " Find symbol of current document
 nnoremap <silent> <space>o  :<C-u>CocList outline<CR>
 " Search workspace symbols
@@ -86,6 +84,8 @@ nmap <leader>ma <Plug>(coc-bookmark-annotate)
 
 " Show commit that changed current line
 nmap <silent> <space>gc <Plug>(coc-git-commit)
+" Show commits of current file
+nmap <silent> <space>gb :<C-u>CocList bcommits<CR>
 
 " multiple cursors session
 nmap <silent> <C-x> <Plug>(coc-cursors-word)
