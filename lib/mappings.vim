@@ -60,7 +60,7 @@ nmap <Leader>sF :CtrlSF<Space>
 " Search by RegExp
 nmap <Leader>sf :CtrlSF -R<Space>
 
-nmap g* :CtrlSF -R \b<C-R><C-W>\b<CR>
+nmap g* :CtrlSF -R \b<c-r>=expand('<cword>')<cr>\b<cr>
 
 nmap <Leader>sy :syntax sync fromstart<CR>
 
