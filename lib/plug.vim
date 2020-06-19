@@ -61,7 +61,7 @@ Plug 'mtth/scratch.vim'
 
 " Markdown
 Plug 'godlygeek/tabular'
-Plug 'gera2ld/vim-markdown'
+Plug 'gabrielelana/vim-markdown'
 Plug 'gera2ld/vim-reveal'
 
 " Theme
@@ -123,6 +123,12 @@ let g:ctrlsf_auto_close = {
     \ "normal" : 0,
     \ "compact": 0
     \}
+" }}}
+
+" vim-markdown {{{
+let g:markdown_enable_folding = 1
+let g:markdown_enable_spell_checking = 0
+"let g:markdown_enable_conceal = 1
 " }}}
 
 " vim:sw=2:sts=2:fdm=marker:
