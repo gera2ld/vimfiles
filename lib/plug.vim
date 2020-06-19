@@ -1,8 +1,6 @@
 let s:plugged = expand('<sfile>:p:h:h') . '/plugged'
 call plug#begin(s:plugged)
 
-Plug 'gera2ld/go-to-js'
-
 if $FZF_HOME != ''
   Plug $FZF_HOME
 else
@@ -80,12 +78,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 " airline and related {{{
 let g:airline#extensions#clock#format = '%H:%M:%S'
-" }}}
-
-" go-to-js {{{
-function! SearchFile(cfile)
-  exec 'CocList -S --input=' . a:cfile . ' files'
-endfunction
 " }}}
 
 " onedark {{{
