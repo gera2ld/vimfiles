@@ -79,6 +79,7 @@ def install_plugins():
       vim_exe,
       '+CocInstall -sync'
       ' coc-css'
+      ' coc-deno'
       ' coc-emmet'
       ' coc-eslint'
       ' coc-git'
