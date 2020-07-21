@@ -82,6 +82,7 @@ def install_plugins():
       ' coc-deno'
       ' coc-emmet'
       ' coc-eslint'
+      ' coc-format-json'
       ' coc-git'
       ' coc-highlight'
       ' coc-html'
