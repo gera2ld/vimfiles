@@ -75,29 +75,35 @@ def install_plugins():
       '+qall',
     ], check=True)
     # Install Coc plugins
+    coc_plugins = [
+      'coc-css',
+      'coc-deno',
+      'coc-emmet',
+      'coc-eslint',
+      'coc-format-json',
+      'coc-git',
+      'coc-highlight',
+      'coc-html',
+      'coc-json',
+      'coc-lists',
+      'coc-markmap',
+      'coc-pairs',
+      'coc-python',
+      'coc-snippets',
+      'coc-tsserver',
+      'coc-vetur',
+      'coc-yank',
+      'coc-svelte',
+      'coc-bookmark',
+    ]
+    limit = 10
     subprocess.run([
       vim_exe,
-      '+CocInstall -sync'
-      ' coc-css'
-      ' coc-deno'
-      ' coc-emmet'
-      ' coc-eslint'
-      ' coc-format-json'
-      ' coc-git'
-      ' coc-highlight'
-      ' coc-html'
-      ' coc-json'
-      ' coc-lists'
-      ' coc-markmap'
-      ' coc-pairs'
-      ' coc-python'
-      ' coc-snippets'
-      ' coc-tsserver'
-      ' coc-vetur'
-      ' coc-yank'
-      ' coc-svelte'
-      ' coc-bookmark'
-      ,
+      # CocInstall cannot receive too many arguments at once
+      *[
+          '+CocInstall -sync ' + ' '.join(coc_plugins[offset:offset+limit])
+          for offset in range(0, len(coc_plugins), limit)
+      ],
       '+qall',
     ], check=True)
 
