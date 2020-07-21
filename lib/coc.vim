@@ -79,8 +79,10 @@ nnoremap <silent> <space>f  :<C-u>CocList files<CR>
 " Show bookmarks
 nnoremap <silent> <space>m  :<C-u>CocList bookmark<CR>
 
-nmap <leader>mm <Plug>(coc-bookmark-toggle)
+nmap <leader>m<space> <Plug>(coc-bookmark-toggle)
 nmap <leader>ma <Plug>(coc-bookmark-annotate)
+nmap <leader>mm <Plug>(coc-markmap-create)
+vmap <leader>mm <Plug>(coc-markmap-create-v)
 
 " Show commit that changed current line
 nmap <silent> <space>gc <Plug>(coc-git-commit)
