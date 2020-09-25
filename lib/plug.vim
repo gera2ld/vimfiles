@@ -39,6 +39,7 @@ Plug 'tikhomirov/vim-glsl'
 Plug 'jparise/vim-graphql'
 Plug 'Galooshi/vim-import-js'
 Plug 'evanleck/vim-svelte'
+Plug 'amiralies/vim-rescript'
 
 " Go
 Plug 'fatih/vim-go'
@@ -64,6 +65,7 @@ Plug 'gera2ld/vim-reveal'
 
 " Theme
 Plug 'joshdick/onedark.vim'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
