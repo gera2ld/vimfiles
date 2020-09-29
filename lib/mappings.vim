@@ -52,6 +52,7 @@ endfor
 for k in split('wkjhlt', '\zs')
   exec 'nmap <silent> <Leader>t' . k . ' :' . s:SplitCommand(k) . ' \| term<CR>'
 endfor
+nmap <silent> <Leader>tf :FloatermToggle<CR>
 
 " Files
 nmap <Leader>ff :FZF<CR>
