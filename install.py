@@ -95,6 +95,7 @@ def install_plugins():
       'coc-yank',
       'coc-svelte',
       'coc-bookmark',
+      'coc-floaterm',
     ]
     limit = 10
     subprocess.run([

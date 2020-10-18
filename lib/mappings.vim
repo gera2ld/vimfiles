@@ -52,7 +52,6 @@ endfor
 for k in split('wkjhlt', '\zs')
   exec 'nmap <silent> <Leader>t' . k . ' :' . s:SplitCommand(k) . ' \| term<CR>'
 endfor
-nmap <silent> <Leader>tf :FloatermToggle<CR>
 
 " Files
 nmap <Leader>ff :FZF<CR>
@@ -69,5 +68,10 @@ nmap <silent> <Leader>tr <Plug>TranslateW
 vmap <silent> <Leader>tr <Plug>TranslateWV
 
 command! -range=% Markmap CocCommand markmap.create <line1> <line2>
+
+" Floaterm
+nmap <silent> <leader>tfn :FloatermNew<CR>
+nmap <silent> <leader>tfc :FloatermKill<CR>
+nmap <silent> <leader>tf<space> :FloatermToggle<CR>
 
 " vim:sw=2:sts=2:fdm=marker:

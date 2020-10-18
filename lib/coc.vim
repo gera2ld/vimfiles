@@ -78,6 +78,8 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 nnoremap <silent> <space>f  :<C-u>CocList files<CR>
 " Show bookmarks
 nnoremap <silent> <space>m  :<C-u>CocList bookmark<CR>
+" List floaterms
+nnoremap <silent> <space>t  :<C-u>CocList floaterm<CR>
 
 nmap <leader>m<space> <Plug>(coc-bookmark-toggle)
 nmap <leader>ma <Plug>(coc-bookmark-annotate)
