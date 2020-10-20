@@ -77,7 +77,7 @@ def install_plugins():
     # Install Coc plugins
     coc_plugins = [
       'coc-css',
-      'coc-deno',
+      # 'coc-deno',
       'coc-emmet',
       'coc-eslint',
       'coc-format-json',
