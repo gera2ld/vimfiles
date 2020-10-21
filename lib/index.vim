@@ -62,33 +62,16 @@ endif
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936 fileformat=unix
 set nowritebackup
 set number
-map <silent> <down> gj
-map <silent> <up> gk
 set visualbell t_vb=    " remove visual bell, must be reset in _gvimrc
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
 set virtualedit=all
 set tabstop=2 shiftwidth=2 expandtab
+set list
 " Disable code folding by Vim, use Coc instead
 " set foldmethod=syntax
 au FileType make setl noexpandtab
-
-" Remove trailing spaces {{{
-fu s:TrimEnd()
-  let o_pos = getpos('.')
-  " e flag for suppressing errors
-  if exists('b:current_syntax') && b:current_syntax == 'markdown'
-    " only empty lines are trimmed
-    %s/^\s\+$//e
-  else
-    %s/\s\+$//e
-  en
-  %s/\r$//e
-  call setpos('.', o_pos)
-endf
-au BufWritePre,FileWritePre * call s:TrimEnd()
-" }}}
 
 au BufNewFile,BufRead *.ejs set filetype=html
 

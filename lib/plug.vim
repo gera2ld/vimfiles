@@ -11,6 +11,7 @@ endif
 Plug 'scrooloose/nerdcommenter'
 Plug 'dyng/ctrlsf.vim'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'ntpeters/vim-better-whitespace'
 
 " indentLine overrides conceallevel and breaks JSON plugins
 " Plug 'Yggdroot/indentLine'
@@ -125,6 +126,10 @@ let g:ctrlsf_auto_close = {
 let g:markdown_enable_folding = 1
 let g:markdown_enable_spell_checking = 0
 "let g:markdown_enable_conceal = 1
+" }}}
+
+" vim-better-whitespace {{{
+let g:better_whitespace_enabled = 1
 " }}}
 
 " vim:sw=2:sts=2:fdm=marker:
