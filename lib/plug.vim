@@ -12,6 +12,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'dyng/ctrlsf.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'wsdjeg/vim-fetch'
 
 " indentLine overrides conceallevel and breaks JSON plugins
 " Plug 'Yggdroot/indentLine'
