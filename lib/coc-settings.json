@@ -19,6 +19,7 @@
     "<C-s>": "action:split",
     "<C-w>": "command:wincmd k"
   },
+  "python.formatting.provider": "yapf",
   "snippets.extends": {
     "javascriptreact": [
       "javascript"
