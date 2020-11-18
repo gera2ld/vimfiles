@@ -17,8 +17,10 @@
 
   ```sh
   # Install Python dependencies
-  $ pip3 install pynvim pylint jedi
+  $ pip3 install pynvim
   ```
+
+  Note: tools like `pylint` needs to be installed per project because they may depend on the version of Python and dependencies of the project.
 
 ### Config Preparation
 
