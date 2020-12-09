@@ -29,6 +29,7 @@ Plug 'voldikss/vim-translator'
 Plug 'gyim/vim-boxdraw'
 Plug 'camspiers/animate.vim'
 Plug 'rickhowe/diffchar.vim'
+Plug 'liuchengxu/vista.vim'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
