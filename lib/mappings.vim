@@ -56,9 +56,7 @@ endfor
 " Files
 nmap <Leader>ff :FZF<CR>
 " Search plain text
-nmap <Leader>sF :CtrlSF<Space>
-" Search by RegExp
-nmap <Leader>sf :CtrlSF -R<Space>
+nmap <Leader>sf :CtrlSF<Space>
 
 nmap g* :CtrlSF -W <c-r>=expand('<cword>')<cr><cr>
 
