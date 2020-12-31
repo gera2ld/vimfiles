@@ -75,38 +75,41 @@ def install_plugins():
       '+qall',
     ], check=True)
     # Install Coc plugins
-    coc_plugins = [
-      'coc-css',
-      # 'coc-deno',
-      'coc-emmet',
-      'coc-eslint',
-      'coc-format-json',
-      'coc-git',
-      'coc-highlight',
-      'coc-html',
-      'coc-json',
-      'coc-lists',
-      'coc-markmap',
-      'coc-pairs',
-      'coc-python',
-      'coc-snippets',
-      'coc-tsserver',
-      'coc-vetur',
-      'coc-yank',
-      'coc-svelte',
-      'coc-bookmark',
-      'coc-floaterm',
-    ]
-    limit = 10
+    print('Install Coc plugins...')
+    ext_dir = os.path.expanduser('~/.config/coc/extensions')
+    os.makedirs(ext_dir, exist_ok=True)
+    pkg_file = os.path.join(ext_dir, 'package.json')
+    if not os.path.isfile(pkg_file):
+        open(pkg_file, 'w').write('{}')
     subprocess.run([
-      vim_exe,
-      # CocInstall cannot receive too many arguments at once
-      *[
-          '+CocInstall -sync ' + ' '.join(coc_plugins[offset:offset+limit])
-          for offset in range(0, len(coc_plugins), limit)
-      ],
-      '+qall',
-    ], check=True)
+        'npm',
+        'install',
+        '--global-style',
+        '--ignore-scripts',
+        '--no-bin-links',
+        '--no-package-lock',
+        '--only=prod',
+        'coc-css',
+        # 'coc-deno',
+        'coc-emmet',
+        'coc-eslint',
+        'coc-format-json',
+        'coc-git',
+        'coc-highlight',
+        'coc-html',
+        'coc-json',
+        'coc-lists',
+        'coc-markmap',
+        'coc-pairs',
+        'coc-python',
+        'coc-snippets',
+        'coc-tsserver',
+        'coc-vetur',
+        'coc-yank',
+        'coc-svelte',
+        'coc-bookmark',
+        'coc-floaterm',
+    ], check=True, cwd=ext_dir)
 
 if __name__ == '__main__':
     write_vimrc()
