@@ -102,7 +102,7 @@ def install_plugins():
         'coc-lists',
         'coc-markmap',
         'coc-pairs',
-        'coc-python',
+        'coc-pyright',
         'coc-snippets',
         'coc-tsserver',
         'coc-vetur',
