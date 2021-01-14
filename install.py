@@ -4,6 +4,7 @@ import sys
 import shutil
 import subprocess
 
+is_win = sys.platform == 'win32'
 root = os.path.abspath(os.path.dirname(__file__))
 # Vim in Windows does not support `\\`
 root = root.replace('\\', '/')
@@ -36,7 +37,7 @@ def install_for_nvim():
     if vim_exe is None:
         vim_exe = exe
     print('Install for NeoVim...')
-    config_dir = os.path.expanduser('~/AppData/Local/nvim' if sys.platform == 'win32' else '~/.config/nvim')
+    config_dir = os.path.expanduser('~/AppData/Local/nvim' if is_win else '~/.config/nvim')
     os.makedirs(config_dir, exist_ok=True)
     symlink_force(os.path.join(root, 'vimrc'), os.path.join(config_dir, 'init.vim'))
     symlink_force(os.path.join(root, 'lib/coc-settings.json'), os.path.join(config_dir, 'coc-settings.json'))
@@ -82,7 +83,7 @@ def install_plugins():
     if not os.path.isfile(pkg_file):
         open(pkg_file, 'w').write('{}')
     subprocess.run([
-        'npm',
+        'npm.cmd' if is_win else 'npm',
         'install',
         '--global-style',
         '--ignore-scripts',
