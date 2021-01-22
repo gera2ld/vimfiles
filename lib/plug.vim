@@ -40,7 +40,6 @@ Plug 'digitaltoad/vim-pug'
 Plug 'posva/vim-vue'
 Plug 'tikhomirov/vim-glsl'
 Plug 'jparise/vim-graphql'
-Plug 'Galooshi/vim-import-js'
 Plug 'evanleck/vim-svelte'
 Plug 'rescript-lang/vim-rescript'
 

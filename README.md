@@ -10,7 +10,7 @@
 
   ```sh
   # Install Node.js dependencies
-  $ yarn global add import-js neovim
+  $ yarn global add neovim
   ```
 
 - Python 3
@@ -57,9 +57,6 @@ $ npx cross-env HTTP_PROXY=http://localhost:1086 HTTPS_PROXY=http://localhost:10
   - `g*` -> `:CtrlSF -R \b<cword>\b`
 - Other
   - `<Leader>sy` -> Sync syntax from start
-- Import JS
-  - `<Leader>i` -> `:ImportJSFix`
-  - `<Leader>j` -> `:ImportJSWord`
 - Buffer
   - `<Space>b` -> `:CocList buffers`
 - Diagnostics
