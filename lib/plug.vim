@@ -51,6 +51,7 @@ Plug 'bling/vim-airline'
 Plug 'enricobacis/vim-airline-clock'
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
+Plug 'mbbill/undotree'
 
 " Git
 Plug 'tpope/vim-fugitive'
