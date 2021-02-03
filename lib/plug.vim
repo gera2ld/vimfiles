@@ -41,7 +41,7 @@ Plug 'posva/vim-vue'
 Plug 'tikhomirov/vim-glsl'
 Plug 'jparise/vim-graphql'
 Plug 'evanleck/vim-svelte'
-Plug 'rescript-lang/vim-rescript'
+" Plug 'rescript-lang/vim-rescript'
 
 " Go
 Plug 'fatih/vim-go'
