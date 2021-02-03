@@ -1,28 +1,26 @@
 # Gerald's vimfiles
 
-## Usage
+## Prerequisites
 
-### Dependencies
-
-- ripgrep
-
+- [fzf][fzf]
+- [ripgrep][ripgrep]
 - Node.js
 
-  ```sh
+  ```bash
   # Install Node.js dependencies
   $ yarn global add neovim
   ```
 
 - Python 3
 
-  ```sh
+  ```bash
   # Install Python dependencies
   $ pip3 install pynvim
   ```
 
   Note: tools like `pylint` needs to be installed per project because they may depend on the version of Python and dependencies of the project.
 
-### Config Preparation
+## Installation
 
 ```ps
 $ git clone git@github.com:gera2ld/vimfiles.git
@@ -37,27 +35,34 @@ $ npx cross-env HTTP_PROXY=http://localhost:1086 HTTPS_PROXY=http://localhost:10
 
 ## Features
 
-### Mappings
-
 - Split windows
   - `<Leader>w{kjhlt}` -> Split window and open above (k) / below (j) / left to (h) / right to (l) the current window, or in a new tab (t)
-- Open a file browser ([vim-dirvish](https://github.com/justinmk/vim-dirvish))
+- Open a file browser ([vim-dirvish][vim-dirvish])
   - `<Leader>e{kjhlwt}` -> Open directory of current file above (k) / below (j) / left to (h) / right to (l) / in (w) the current window, or in a new tab (t)
-  - `<Leader>e{WKJHLT}` -> same as `<Leader>e[wkjhlt]` but open current working directory
+  - `<Leader>e{KJHLWT}` -> same as `<Leader>e[kjhlwt]` but open current working directory
 - Open a terminal / shell
-  - `<Leader>t{kjhlt}` -> Open a terminal above (k) / below (j) / left to (h) / right to (l) / in (w) the current window, or in a new tab (t)
-- JSON (`*.json` only)
-  - `<LocalLeader>jb` -> JSON beautify
-  - `<LocalLeader>jc` -> JSON compact
+  - `<Leader>t{kjhlwt}` -> Open a terminal above (k) / below (j) / left to (h) / right to (l) / in (w) the current window, or in a new tab (t)
+- JSON ([coc-format-json][coc-format-json])
+  - `:CocCommand formatJson --preset-json`
 - Searching
-  - `<Leader>ff` -> `:FZF`, search files in current directory with FZF
-  - `<Leader>sf` -> `:CtrlSF `, start searching with Ags
-  - `<Space>f` -> `:CocList files`, search files in current directory
-  - `gf` -> Try to find a JavaScript file and fallback to FZF if not found by default rule
-  - `g*` -> `:CtrlSF -R \b<cword>\b`
-- Other
-  - `<Leader>sy` -> Sync syntax from start
+  - `<Space>f` -> `:CocList files`, search files in current directory ([coc.nvim][coc.nvim])
+  - `<Leader>ff` -> `:FZF`, search files in current directory ([fzf][fzf])
+  - `<Leader>sf` -> `:CtrlSF `, search content in current directory ([ripgrep][ripgrep])
+  - `g*` -> Search whole word the matches the word under cursor ([ctrlsf.vim][ctrlsf.vim])
+  - `gF` -> Open file under cursor and jump to specified line and column ([vim-fetch][vim-fetch])
 - Buffer
   - `<Space>b` -> `:CocList buffers`
 - Diagnostics
   - `<Space>d` -> `:CocList diagnostics`
+- Git
+  - `<Space>gc` -> Show commit that changed current line
+  - `<Space>gb` -> Show commits that changed current file
+- and more...
+
+[coc-format-json]: https://github.com/gera2ld/coc-format-json
+[coc.nvim]: https://github.com/neoclide/coc.nvim
+[ctrlsf.vim]: https://github.com/dyng/ctrlsf.vim
+[fzf]: https://github.com/junegunn/fzf
+[ripgrep]: https://github.com/BurntSushi/ripgrep
+[vim-dirvish]: https://github.com/justinmk/vim-dirvish
+[vim-fetch]: https://github.com/wsdjeg/vim-fetch

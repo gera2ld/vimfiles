@@ -89,7 +89,7 @@ vmap <leader>mm <Plug>(coc-markmap-create-v)
 
 " Show commit that changed current line
 nmap <silent> <space>gc <Plug>(coc-git-commit)
-" Show commits of current file
+" Show commits that changed current file
 nmap <silent> <space>gb :<C-u>CocList bcommits<CR>
 
 " multiple cursors session
