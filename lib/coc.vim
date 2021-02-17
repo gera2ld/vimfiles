@@ -105,4 +105,5 @@ endfunc
 " coc-pairs
 autocmd FileType vim let b:coc_pairs_disabled = ['"']
 
+let g:coc_data_home = expand('<sfile>:p:h:h') . '/coc'
 " let g:coc_node_args = ['--nolazy', '--inspect-brk=9222']
