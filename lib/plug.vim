@@ -13,6 +13,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'wsdjeg/vim-fetch'
+Plug 'phaazon/hop.nvim'
 
 " indentLine overrides conceallevel and breaks JSON plugins
 " Plug 'Yggdroot/indentLine'
@@ -43,8 +44,9 @@ Plug 'jparise/vim-graphql'
 Plug 'evanleck/vim-svelte'
 " Plug 'rescript-lang/vim-rescript'
 
-" Go
+" Other languages
 Plug 'fatih/vim-go'
+Plug 'PProvost/vim-ps1'
 
 " UI
 Plug 'bling/vim-airline'
