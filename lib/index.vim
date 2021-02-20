@@ -82,6 +82,12 @@ if has('win32')
   se mp=mingw32-make
   ru delmenu.vim
   ru menu.vim
+
+  " Set shell to PowerShell
+  set shell=powershell
+  set shellquote= shellpipe=\| shellxquote=
+  set shellcmdflag=-NoLogo\ -NoProfile\ -ExecutionPolicy\ RemoteSigned\ -Command
+  set shellredir=\|\ Out-File\ -Encoding\ UTF8
 else
   se dir=/tmp//
   se undodir=/tmp//
