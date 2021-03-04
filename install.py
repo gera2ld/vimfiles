@@ -24,12 +24,13 @@ se rtp+={root}
 ru lib/index.vim
 ''')
 
-def symlink_force(src, dst):
+link = os.link if is_win else os.symlink
+def link_force(src, dst):
     try:
         os.remove(dst)
     except FileNotFoundError:
         pass
-    os.symlink(src, dst)
+    link(src, dst)
 
 def install_for_nvim():
     exe = shutil.which('nvim')
@@ -42,8 +43,8 @@ def install_for_nvim():
     print('Install for NeoVim...')
     config_dir = os.path.join(config_root, 'nvim')
     os.makedirs(config_dir, exist_ok=True)
-    symlink_force(os.path.join(root, 'vimrc'), os.path.join(config_dir, 'init.vim'))
-    symlink_force(os.path.join(root, 'lib/coc-settings.json'), os.path.join(config_dir, 'coc-settings.json'))
+    link_force(os.path.join(root, 'vimrc'), os.path.join(config_dir, 'init.vim'))
+    link_force(os.path.join(root, 'lib/coc-settings.json'), os.path.join(config_dir, 'coc-settings.json'))
 
 def install_for_vim():
     exe = shutil.which('vim')
@@ -56,8 +57,8 @@ def install_for_vim():
     config_dir = os.path.expanduser('~/.vim')
     os.makedirs(config_dir, exist_ok=True)
     print('Install for Vim...')
-    symlink_force(os.path.join(root, 'vimrc'), os.path.expanduser('~/.vimrc'))
-    symlink_force(os.path.join(root, 'lib/coc-settings.json'), os.path.join(config_dir, 'coc-settings.json'))
+    link_force(os.path.join(root, 'vimrc'), os.path.expanduser('~/.vimrc'))
+    link_force(os.path.join(root, 'lib/coc-settings.json'), os.path.join(config_dir, 'coc-settings.json'))
 
 def install_plugins():
     if vim_exe is None:

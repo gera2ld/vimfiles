@@ -84,7 +84,11 @@ if has('win32')
   ru menu.vim
 
   " Set shell to PowerShell
-  set shell=powershell
+  if executable('pwsh')
+    set shell=pwsh
+  else
+    set shell=powershell
+  endif
   set shellquote= shellpipe=\| shellxquote=
   set shellcmdflag=-NoLogo\ -NoProfile\ -ExecutionPolicy\ RemoteSigned\ -Command
   set shellredir=\|\ Out-File\ -Encoding\ UTF8

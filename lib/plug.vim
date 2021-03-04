@@ -1,11 +1,7 @@
 let s:plugged = expand('<sfile>:p:h:h') . '/plugged'
 call plug#begin(s:plugged)
 
-if $FZF_HOME != ''
-  Plug $FZF_HOME
-else
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-endif
+Plug 'junegunn/fzf'
 " Plug 'junegunn/fzf.vim'
 
 Plug 'scrooloose/nerdcommenter'
