@@ -67,9 +67,21 @@ vmap <silent> <Leader>tr <Plug>TranslateWV
 
 command! -range=% Markmap CocCommand markmap.create <line1> <line2>
 
-" Floaterm
+" Floaterm {{{
 nmap <silent> <leader>tfn :FloatermNew<CR>
 nmap <silent> <leader>tfc :FloatermKill<CR>
 nmap <silent> <leader>tf<space> :FloatermToggle<CR>
+" }}}
+
+" animate {{{
+nnoremap <silent> <Up>    :call animate#window_delta_height(10)<CR>
+nnoremap <silent> <Down>  :call animate#window_delta_height(-10)<CR>
+nnoremap <silent> <Left>  :call animate#window_delta_width(10)<CR>
+nnoremap <silent> <Right> :call animate#window_delta_width(-10)<CR>
+" }}}
+
+" hop {{{
+nmap <silent> <leader>h :HopWord<CR>
+" }}}
 
 " vim:sw=2:sts=2:fdm=marker:
