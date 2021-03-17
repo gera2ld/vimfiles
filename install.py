@@ -107,6 +107,7 @@ def install_plugins():
         'coc-markmap',
         'coc-pairs',
         'coc-pyright',
+        'coc-reveal',
         'coc-snippets',
         'coc-tsserver',
         'coc-vetur',
