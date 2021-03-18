@@ -102,6 +102,7 @@ def install_plugins():
         'coc-git',
         'coc-highlight',
         'coc-html',
+        'coc-jest',
         'coc-json',
         'coc-lists',
         'coc-markmap',
