@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import sys
+import json
 import shutil
 import subprocess
 
@@ -84,20 +85,18 @@ def install_plugins():
     ext_dir = os.path.join(root, 'coc/extensions')
     os.makedirs(ext_dir, exist_ok=True)
     pkg_file = os.path.join(ext_dir, 'package.json')
-    if not os.path.isfile(pkg_file):
-        open(pkg_file, 'w').write('{}')
-    subprocess.run([
-        'npm.cmd' if is_win else 'npm',
-        'install',
-        '--global-style',
-        '--ignore-scripts',
-        '--no-bin-links',
-        '--no-package-lock',
-        '--only=prod',
+    try:
+        pkg = json.load(open(pkg_file))
+    except:
+        pkg = {}
+    pkg_dependencies = pkg.get('dependencies', {})
+    dependencies = {}
+    for dep in [
         'coc-css',
         # 'coc-deno',
         'coc-emmet',
         'coc-eslint',
+        'coc-floaterm',
         'coc-format-json',
         'coc-git',
         'coc-highlight',
@@ -109,12 +108,34 @@ def install_plugins():
         'coc-pairs',
         'coc-pyright',
         'coc-reveal',
+        'coc-rls',
         'coc-snippets',
+        'coc-svelte',
         'coc-tsserver',
         'coc-vetur',
         'coc-yank',
-        'coc-svelte',
-        'coc-floaterm',
+    ]:
+        dependencies[dep] = pkg_dependencies.get(dep, '>=0.0.0')
+    pkg['dependencies'] = dependencies
+    json.dump(pkg, open(pkg_file, 'w'))
+    npm_exe = shutil.which('npm')
+    npx_exe = shutil.which('npx')
+    if npm_exe is None or npx_exe is None:
+        print('npm or npx is not found')
+        return
+    subprocess.run([
+        npx_exe,
+        'npm-check-updates',
+        '-u',
+    ], check=True, cwd=ext_dir)
+    subprocess.run([
+        npm_exe,
+        'install',
+        '--global-style',
+        '--ignore-scripts',
+        '--no-bin-links',
+        '--no-package-lock',
+        '--only=prod',
     ], check=True, cwd=ext_dir)
 
 if __name__ == '__main__':
