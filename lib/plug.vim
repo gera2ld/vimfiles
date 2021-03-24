@@ -4,36 +4,72 @@ call plug#begin(s:plugged)
 Plug 'junegunn/fzf'
 " Plug 'junegunn/fzf.vim'
 
+" Powerful comment functions
 Plug 'scrooloose/nerdcommenter'
+
+" Asynchronous search and view
 Plug 'dyng/ctrlsf.vim'
+
+" Visually displaying indent levels
 Plug 'nathanaelkane/vim-indent-guides'
+
+" Highlight trailing whitespaces
 Plug 'ntpeters/vim-better-whitespace'
+
+" Open file path with line and column
 Plug 'wsdjeg/vim-fetch'
+
+" Git
+Plug 'tpope/vim-fugitive'
+
+" Diff words asynchronously, enhancing the inherent diff
+Plug 'rickhowe/diffchar.vim'
+
+" Jump anywhere
 Plug 'phaazon/hop.nvim'
 
 " indentLine overrides conceallevel and breaks JSON plugins
 " Plug 'Yggdroot/indentLine'
 
-Plug 'lepture/vim-jinja'
+" Run shell commands asynchronously in the background
+Plug 'skywind3000/asyncrun.vim'
+
+" Visualize undo history
+Plug 'mbbill/undotree'
+
+" Translator
+Plug 'voldikss/vim-translator'
+
+" Scratch window
+Plug 'mtth/scratch.vim'
+
+" Animate window resizing
+Plug 'camspiers/animate.vim'
+
+" Draw ASCII boxes
+Plug 'gyim/vim-boxdraw'
+
+" Run tests on different granularities
+Plug 'vim-test/vim-test'
+
+" Coc.nvim
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
+" Snippets data, will be loaded by coc-snippets
+Plug 'honza/vim-snippets'
+
+" View and search LSP symbols in a sidebar, use with coc.nvim by `:Vista coc`
+Plug 'liuchengxu/vista.vim'
+
+" Language support
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'cespare/vim-toml'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'honza/vim-snippets'
-Plug 'skywind3000/asyncrun.vim'
-Plug 'voldikss/vim-translator'
-" Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
-Plug 'gyim/vim-boxdraw'
-Plug 'camspiers/animate.vim'
-Plug 'rickhowe/diffchar.vim'
-Plug 'liuchengxu/vista.vim'
 
 " JavaScript
-Plug 'pangloss/vim-javascript'
-" Plug 'leafgarland/typescript-vim'
-Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'pangloss/vim-javascript'
+" Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'digitaltoad/vim-pug'
 Plug 'posva/vim-vue'
 Plug 'tikhomirov/vim-glsl'
 Plug 'jparise/vim-graphql'
@@ -49,15 +85,7 @@ Plug 'bling/vim-airline'
 Plug 'enricobacis/vim-airline-clock'
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
-Plug 'mbbill/undotree'
-
-" Git
-Plug 'tpope/vim-fugitive'
-
-"Plug 'elentok/plaintasks.vim'
-"Plug 'freitass/todo.txt-vim'
-Plug 'jceb/vim-orgmode'
-Plug 'mtth/scratch.vim'
+Plug 'voldikss/vim-floaterm'
 
 " Markdown
 Plug 'godlygeek/tabular'
@@ -65,7 +93,6 @@ Plug 'gabrielelana/vim-markdown'
 
 " Theme
 Plug 'joshdick/onedark.vim'
-Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 

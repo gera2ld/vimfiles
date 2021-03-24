@@ -62,7 +62,8 @@ nnoremap <silent> <space>d  :<C-u>CocList diagnostics<CR>
 " Manage extensions
 nnoremap <silent> <space>e  :<C-u>CocList extensions<CR>
 " Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<CR>
+nnoremap <silent> <space>o  :<C-u>Vista coc<CR>
+" nnoremap <silent> <space>o  :<C-u>CocList outline<CR>
 " Search workspace symbols
 nnoremap <silent> <space>s  :<C-u>CocList -I symbols<CR>
 " Search buffer list
