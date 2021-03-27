@@ -61,24 +61,9 @@ Plug 'honza/vim-snippets'
 " View and search LSP symbols in a sidebar, use with coc.nvim by `:Vista coc`
 Plug 'liuchengxu/vista.vim'
 
-" Language support
+" languages
 Plug 'editorconfig/editorconfig-vim'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'cespare/vim-toml'
-
-" JavaScript
-" Plug 'pangloss/vim-javascript'
-" Plug 'HerringtonDarkholme/yats.vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'posva/vim-vue'
-Plug 'tikhomirov/vim-glsl'
-Plug 'jparise/vim-graphql'
-Plug 'evanleck/vim-svelte'
-" Plug 'rescript-lang/vim-rescript'
-
-" Other languages
-Plug 'fatih/vim-go'
-Plug 'PProvost/vim-ps1'
+Plug 'sheerun/vim-polyglot'
 
 " UI
 Plug 'bling/vim-airline'
@@ -89,7 +74,6 @@ Plug 'voldikss/vim-floaterm'
 
 " Markdown
 Plug 'godlygeek/tabular'
-Plug 'gabrielelana/vim-markdown'
 
 " Theme
 Plug 'joshdick/onedark.vim'

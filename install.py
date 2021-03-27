@@ -68,10 +68,11 @@ def install_plugins():
     print('Install plugins...')
     subprocess.run([
         'curl',
-        '-fLo',
+        '-fsSLo',
         f'{root}/autoload/plug.vim.download',
         '--create-dirs',
-        'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim',
+        # 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim',
+        'http://cdn.jsdelivr.net/gh/junegunn/vim-plug@master/plug.vim',
     ], check=True)
     os.replace(os.path.join(root, 'autoload/plug.vim.download'), os.path.join(root, 'autoload/plug.vim'))
     # Install Vim plugins
@@ -106,6 +107,7 @@ def install_plugins():
         'coc-lists',
         'coc-markmap',
         'coc-pairs',
+        'coc-powershell',
         'coc-pyright',
         'coc-reveal',
         'coc-rls',
