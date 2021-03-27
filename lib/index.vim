@@ -96,9 +96,12 @@ else
   se dir=/tmp//
   se undodir=/tmp//
 endif
-ru lib/plug.vim
-ru lib/coc.vim
-ru lib/mappings.vim
+
+if !exists('g:vscode')
+  ru lib/plug.vim
+  ru lib/coc.vim
+  ru lib/mappings.vim
+endif
 
 let g:loaded_python_provider = 0
 

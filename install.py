@@ -12,10 +12,11 @@ def normalize_path(path):
 is_win = sys.platform == 'win32'
 root = normalize_path(os.path.abspath(os.path.dirname(__file__)))
 config_root = normalize_path(os.path.expanduser('~/AppData/Local' if is_win else '~/.config'))
+vimrc = os.path.join(root, 'vimrc')
 vim_exe = None
 
 def write_vimrc():
-    open('vimrc', 'w').write(f'''\
+    open(vimrc, 'w').write(f'''\
 " This file is created automatically by github:gera2ld/vimfiles.
 " Please do not edit it.
 " Edit `~/.vimrc.local` instead for custom configurations.
@@ -44,7 +45,7 @@ def install_for_nvim():
     print('Install for NeoVim...')
     config_dir = os.path.join(config_root, 'nvim')
     os.makedirs(config_dir, exist_ok=True)
-    link_force(os.path.join(root, 'vimrc'), os.path.join(config_dir, 'init.vim'))
+    link_force(vimrc, os.path.join(config_dir, 'init.vim'))
     link_force(os.path.join(root, 'lib/coc-settings.json'), os.path.join(config_dir, 'coc-settings.json'))
 
 def install_for_vim():
@@ -58,7 +59,7 @@ def install_for_vim():
     config_dir = os.path.expanduser('~/.vim')
     os.makedirs(config_dir, exist_ok=True)
     print('Install for Vim...')
-    link_force(os.path.join(root, 'vimrc'), os.path.expanduser('~/.vimrc'))
+    link_force(vimrc, os.path.expanduser('~/.vimrc'))
     link_force(os.path.join(root, 'lib/coc-settings.json'), os.path.join(config_dir, 'coc-settings.json'))
 
 def install_plugins():
