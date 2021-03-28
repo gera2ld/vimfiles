@@ -13,6 +13,9 @@ Plug 'dyng/ctrlsf.vim'
 " Visually displaying indent levels
 Plug 'nathanaelkane/vim-indent-guides'
 
+" indentLine overrides conceallevel and breaks JSON plugins
+" Plug 'Yggdroot/indentLine'
+
 " Highlight trailing whitespaces
 Plug 'ntpeters/vim-better-whitespace'
 
@@ -27,9 +30,6 @@ Plug 'rickhowe/diffchar.vim'
 
 " Jump anywhere
 Plug 'phaazon/hop.nvim'
-
-" indentLine overrides conceallevel and breaks JSON plugins
-" Plug 'Yggdroot/indentLine'
 
 " Run shell commands asynchronously in the background
 Plug 'skywind3000/asyncrun.vim'
@@ -87,6 +87,7 @@ let g:NERDSpaceDelims = 1
 
 " vim-indent-guides {{{
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
 " }}}
 
 " airline and related {{{
