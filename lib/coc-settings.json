@@ -1,12 +1,4 @@
 {
-  "eslint.filetypes": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "svelte"
-  ],
   "git.addGBlameToVirtualText": true,
   "list.normalMappings": {
     "t": "action:tabe",
@@ -19,6 +11,7 @@
     "<C-s>": "action:split",
     "<C-w>": "command:wincmd k"
   },
+  "powershell.powerShellExePath": "pwsh",
   "python.formatting.provider": "yapf",
   "snippets.extends": {
     "javascriptreact": [
