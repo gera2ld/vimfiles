@@ -101,6 +101,7 @@ def install_plugins():
         'coc-floaterm',
         'coc-format-json',
         'coc-git',
+        'coc-go',
         'coc-highlight',
         'coc-html',
         'coc-jest',
