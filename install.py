@@ -48,11 +48,12 @@ def write_vimrc():
 " Edit `~/.vimrc.local` instead for custom configurations.
 ''',
     ]
-    python = '.venv/Scripts/python' if is_win else '.venv/bin/python'
-    if os.path.isdir(f'{root}/.venv'):
+    python = '.venv/Scripts/python.exe' if is_win else '.venv/bin/python'
+    python = f'{root}/{python}'
+    if os.path.isfile(python):
         lines.append(f'''\
 " Path to Python 3
-let g:python3_host_prog = '{root}/{python}'
+let g:python3_host_prog = '{python}'
 " Disable Python 2
 let g:loaded_python_provider = 1
 ''')
