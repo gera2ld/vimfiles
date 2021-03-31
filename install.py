@@ -15,11 +15,28 @@ config_root = normalize_path(os.path.expanduser('~/AppData/Local' if is_win else
 vimrc = os.path.join(root, 'vimrc')
 vim_exe = None
 
+def prepare_python():
+    exe = shutil.which('poetry')
+    if exe is None:
+        print('Poetry is not found, skipping pynvim')
+        return
+    print('Install pynvim...')
+    subprocess.run([
+        exe,
+        'install',
+    ], check=True, cwd=root)
+
 def write_vimrc():
+    python = '.venv/Scripts/python' if is_win else '.venv/bin/python'
     open(vimrc, 'w').write(f'''\
 " This file is created automatically by github:gera2ld/vimfiles.
 " Please do not edit it.
 " Edit `~/.vimrc.local` instead for custom configurations.
+
+" Path to Python 3
+let g:python3_host_prog = '{root}/{python}'
+" Disable Python 2
+let g:loaded_python_provider = 1
 
 se rtp+={root}
 
@@ -143,6 +160,7 @@ def install_plugins():
     ], check=True, cwd=ext_dir)
 
 if __name__ == '__main__':
+    prepare_python()
     write_vimrc()
     install_for_nvim()
     install_for_vim()

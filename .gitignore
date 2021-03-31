@@ -4,3 +4,6 @@
 /coc
 .netrwhist
 /vimrc
+/poetry.lock
+.nvimlog
+/.vim
