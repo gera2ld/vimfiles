@@ -18,30 +18,50 @@ vim_exe = None
 def prepare_python():
     exe = shutil.which('poetry')
     if exe is None:
-        print('Poetry is not found, skipping pynvim')
+        print('Poetry is not found, skipping Python')
         return
-    print('Install pynvim...')
+    print('Prepare Python...')
     subprocess.run([
         exe,
         'install',
     ], check=True, cwd=root)
 
+def prepare_node():
+    exe = shutil.which('yarn')
+    if exe is None:
+        print('Yarn is not found, skipping Node.js')
+        return
+    print('Prepare Node.js...')
+    if shutil.which('neovim-node-host') is None:
+        subprocess.run([
+            exe,
+            'global',
+            'add',
+            'neovim',
+        ], check=True, cwd=root)
+
 def write_vimrc():
-    python = '.venv/Scripts/python' if is_win else '.venv/bin/python'
-    open(vimrc, 'w').write(f'''\
+    lines = [
+        '''\
 " This file is created automatically by github:gera2ld/vimfiles.
 " Please do not edit it.
 " Edit `~/.vimrc.local` instead for custom configurations.
-
+''',
+    ]
+    python = '.venv/Scripts/python' if is_win else '.venv/bin/python'
+    if os.path.isdir(f'{root}/.venv'):
+        lines.append(f'''\
 " Path to Python 3
 let g:python3_host_prog = '{root}/{python}'
 " Disable Python 2
 let g:loaded_python_provider = 1
-
+''')
+    lines.append(f'''\
 se rtp+={root}
 
 ru lib/index.vim
 ''')
+    open(vimrc, 'w').write('\n'.join(lines))
 
 link = os.link if is_win else os.symlink
 def link_force(src, dst):
@@ -161,6 +181,7 @@ def install_plugins():
 
 if __name__ == '__main__':
     prepare_python()
+    prepare_node()
     write_vimrc()
     install_for_nvim()
     install_for_vim()
