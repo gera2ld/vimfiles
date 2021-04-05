@@ -2,7 +2,7 @@ let s:plugged = expand('<sfile>:p:h:h') . '/plugged'
 call plug#begin(s:plugged)
 
 Plug 'junegunn/fzf'
-" Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
 
 " Powerful comment functions
 Plug 'scrooloose/nerdcommenter'
@@ -79,6 +79,10 @@ Plug 'godlygeek/tabular'
 Plug 'joshdick/onedark.vim'
 
 call plug#end()
+
+" FZF {{{
+let g:fzf_command_prefix = 'FZF'
+" }}}
 
 " nerdcommenter {{{
 " Add a space after the left delimiter and before the right delimiter
