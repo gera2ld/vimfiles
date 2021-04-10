@@ -1,7 +1,8 @@
 let s:plugged = expand('<sfile>:p:h:h') . '/plugged'
 call plug#begin(s:plugged)
 
-Plug 'junegunn/fzf'
+" Install fzf globally at ~/.fzf so it can be used without vim
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Powerful comment functions
