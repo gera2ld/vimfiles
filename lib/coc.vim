@@ -107,7 +107,10 @@ endfunc
 autocmd FileType vim let b:coc_pairs_disabled = ['"']
 
 " coc-go
-autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd BufWritePre *.go silent call CocAction('runCommand', 'editor.action.organizeImport')
+
+" coc-pyright
+autocmd BufWritePre *.py silent call CocAction('runCommand', 'editor.action.organizeImport') | silent call CocAction('format')
 
 let g:coc_data_home = expand('<sfile>:p:h:h') . '/coc'
 " let g:coc_node_args = ['--nolazy', '--inspect-brk=9222']
