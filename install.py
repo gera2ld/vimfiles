@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-import os
-import sys
 import json
+import os
 import shutil
 import subprocess
+import sys
 
 # Vim in Windows does not support `\\`
 def normalize_path(path):
@@ -27,16 +27,16 @@ def prepare_python():
     ], check=True, cwd=root)
 
 def prepare_node():
-    exe = shutil.which('yarn')
+    exe = shutil.which('npm')
     if exe is None:
-        print('Yarn is not found, skipping Node.js')
+        print('NPM is not found, skipping Node.js')
         return
     print('Prepare Node.js...')
     if shutil.which('neovim-node-host') is None:
         subprocess.run([
             exe,
-            'global',
-            'add',
+            'install',
+            '-g',
             'neovim',
         ], check=True, cwd=root)
 
