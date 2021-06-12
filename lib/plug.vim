@@ -68,7 +68,6 @@ Plug 'sheerun/vim-polyglot'
 
 " UI
 Plug 'bling/vim-airline'
-Plug 'enricobacis/vim-airline-clock'
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'voldikss/vim-floaterm'
@@ -93,10 +92,6 @@ let g:NERDSpaceDelims = 1
 " vim-indent-guides {{{
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
-" }}}
-
-" airline and related {{{
-let g:airline#extensions#clock#format = '%H:%M:%S'
 " }}}
 
 " onedark {{{
