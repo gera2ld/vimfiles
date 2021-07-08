@@ -1,5 +1,6 @@
 {
   "git.addGBlameToVirtualText": true,
+  "git.splitWindowCommand": "rightbelow vs",
   "list.normalMappings": {
     "t": "action:tabe",
     "v": "action:vsplit",

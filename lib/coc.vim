@@ -88,7 +88,7 @@ nmap <leader>ma <Plug>(coc-bookmark-annotate)
 nmap <leader>mm <Plug>(coc-markmap-create)
 vmap <leader>mm <Plug>(coc-markmap-create-v)
 
-" Show commit that changed current line
+" Show commit that contains current position
 nmap <silent> <space>gc <Plug>(coc-git-commit)
 " Show commits that changed current file
 nmap <silent> <space>gb :<C-u>CocList bcommits<CR>
