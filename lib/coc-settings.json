@@ -20,5 +20,12 @@
     ]
   },
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "languageserver": {
+    "ocaml-lsp": {
+      "command": "opam",
+      "args": ["config", "exec", "--", "ocamllsp"],
+      "filetypes": ["ocaml", "reason"]
+    }
+  }
 }

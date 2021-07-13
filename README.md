@@ -15,6 +15,12 @@
 
   Note: tools like `pylint` needs to be installed per project because they may depend on the version of Python and dependencies of the project.
 
+- OCaml
+
+  ```bash
+  $ opam install ocaml-lsp-server ocamlformat
+  ```
+
 ## Installation
 
 ```ps
